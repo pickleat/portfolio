@@ -1,62 +1,94 @@
+<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
 <style>
-<link href="https://fonts.googleapis.com/css?family=Raleway" rel="Raleway">
+/*
+Color Scheme
+Smoky Black: #131200 / rgba(19, 18, 0, 1);
+Ebony: #605C4E / rgba(96, 92, 78, 1);
+Wintergreen Dream: #558B6E / rgba(85, 139, 110, 1);
+X11 Gray: #B8C4BB / rgba(184, 196, 187, 1);
+Beige: #FAF3DD / rgba(250, 243, 221, 1);
+*/
 :root {
   font-family: Raleway, sans-serif;
   background-color: white;
 }
 body {
-  background-color: black;
-  background-image: url("https://images.unsplash.com/photo-1503076634654-4383ec86da1b?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=324ee8da0a5d59542e172881accbfc0e&auto=format&fit=crop&w=2250&q=80");
-  width: 100%;
+  background-color: rgba(19, 18, 0, 1);
+  background-image: url("https://images.unsplash.com/photo-1503076634654-4383ec86da1b?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=324ee8da0a5d59542e172881accbfc0e&auto=format&fit=crop&w=2250&q=80"), url("https://images.unsplash.com/photo-1514134583630-250e42c36dbd?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=7489addcca7cb627dc6aa26a42e5099c&auto=format&fit=crop&w=934&q=80");
+  background-repeat: no-repeat, no-repeat;
+  background-size: 100%;
 }
-
 h1 {
   text-align: center;
-  font-family: helvetica, sans-serif;
+  font-family: Raleway, sans-serif;
   font-size: 50px;
-  color: rgb(252, 251, 244);
+  color: rgba(250, 243, 221, 1);
 }
 p {
   font-family: Raleway, sans-serif;
   text-align: center;
-  font-size: 14px;
-  color: white;
-  background-color: rgba(89, 86, 65, .9);
+  font-size: 16px;
+  color: rgba(250, 243, 221, 1);
+  background-color: rgba(96, 92, 78, .8);
   padding: 100px;
 }
 footer {
   font-family: monospace;
-  color: rgb(255, 252, 232);
+  color: rgba(19, 18, 0, 1);
   text-align: center;
-  font-size: 2em;
+  font-size: 20px;
   max-width: 100%;
+  background-color: rgba(85, 139, 110, .8);
+  position: absolute;
+  bottom: 0;
+  width: 100%;
 
 }
 footer ul {
     flex: 1;
     display: flex;
     justify-content: space-around;
+    list-style: none;
     margin: 0;
     padding-left: 0;
-    list-style: none;
+    text-align: justify;
 }
 a {
-  color: rgb(255, 252, 232);
+  color: rgba(19, 18, 0, 1);
 }
 a:hover {
-  color: rgba(255, 252, 232, .5);
+  color: rgba(250, 243, 221, 1);
+}
+.profilePhoto {
+  width: 25%;
+  align-content: right;
+}
+.bio {
+  font-family: sans-serif;
+  color: pink;
+  size: 12px;
+  align-items: right;
 }
 </style>
 
 <h1>Andy Pickle</h1>
-<p> Currently learning: HTML/CSS, JavaScript, & C.
+<p>
+  Currently learning: HTML/CSS, JavaScript, & C.
   Based in Central Arkansas.
 </p>
 
-<footer> Follow me!
+<p>
+  This is the second paragraph section.
+</p>
+
+<p>
+  This is the third paragraph section.
+</p>
+<footer>
+  Follow me!
   <ul>
-    <li> <a href="https://github.com/pickleat"title="my GitHub page">GitHub</a></li>
-    <li> <a href="https://twitter.com/pickleat"title="I tweet">Twitter</a></li>
-    <li> <a href="https://medium.com/@pickleat"title="my Medium blog">Medium</li>
-</ul>
+    <li><a href="https://github.com/pickleat"title="my GitHub page">GitHub</a></li>
+    <li><a href="https://twitter.com/pickleat"title="I tweet">Twitter</a></li>
+    <li><a href="https://medium.com/@pickleat"title="my Medium blog">Medium</li>
+  </ul>
 </footer>
