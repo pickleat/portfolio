@@ -8,9 +8,11 @@ Wintergreen Dream: #558B6E / rgba(85, 139, 110, 1);
 X11 Gray: #B8C4BB / rgba(184, 196, 187, 1);
 Beige: #FAF3DD / rgba(250, 243, 221, 1);
 */
-:root {
-  font-family: Raleway, sans-serif;
-  background-color: white;
+
+}
+#page-container {
+  position: relative;
+  min-height: 100vh;
 }
 body {
   background-color: rgba(19, 18, 0, 1);
@@ -18,11 +20,24 @@ body {
   background-repeat: no-repeat, no-repeat;
   background-size: 100%;
 }
+header {
+  text-align: center;
+  font-family: Raleway, sans-serif;
+  font-size: 50px;
+  color: rgba(250, 243, 221, 1);
+  position: absolute;
+  top: 0px;
+  width: 100%;
+  padding: 10px;
+  background-color: rgba(85, 139, 110, .8);
+}
+
 h1 {
   text-align: center;
   font-family: Raleway, sans-serif;
   font-size: 50px;
   color: rgba(250, 243, 221, 1);
+  padding-top: 50px;
 }
 p {
   font-family: Raleway, sans-serif;
@@ -38,11 +53,11 @@ footer {
   text-align: center;
   font-size: 20px;
   max-width: 100%;
+  padding: 10px;
   background-color: rgba(85, 139, 110, .8);
   position: absolute;
   bottom: 0;
   width: 100%;
-
 }
 footer ul {
     flex: 1;
@@ -50,7 +65,7 @@ footer ul {
     justify-content: space-around;
     list-style: none;
     margin: 0;
-    padding-left: 0;
+    width: 100%;
     text-align: justify;
 }
 a {
@@ -71,7 +86,7 @@ a:hover {
 }
 </style>
 
-<h1>Andy Pickle</h1>
+<header>Andy Pickle</header>
 <p>
   Currently learning: HTML/CSS, JavaScript, & C.
   Based in Central Arkansas.
