@@ -5,6 +5,7 @@ Your website must contain at least four different .html pages, and it should be 
     2 - About Me (personal) - remember people don't actually care about your family in your professional about
     3 - Projects, for now put links to your best code repositories. 
     4 - Contact, just links like AliSpit.tel
+    404 error page :) 
 Your website must include at least one list (ordered or unordered), at least one table, and at least one image.
     List
     Table
