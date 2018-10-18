@@ -1,0 +1,53 @@
+/* Color Scheme 
+Mint Cream #f7fff7
+English Green #1a535c
+Medium Turquoise #4ecdc4
+Pastel Red #ff6b6b
+Maize #ffe66d
+*/ 
+/* Fonts
+<link href="https://fonts.googleapis.com/css?family=Open+Sans|Vollkorn" rel="stylesheet"> 
+font-family: 'Open Sans', sans-serif;
+font-family: 'Vollkorn', serif; 
+*/
+
+body {
+    margin: 0;
+    background: #f7fff7;
+    font-family: 'Open Sans', sans-serif;
+}
+h1 {
+    color: #1a535c;
+    font-family: 'Vollkorn', serif;
+    margin-left: 5px;
+}
+#navBar {
+    background-color: #ffe66d;
+    color: #f7fff7;
+}
+ul {
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+    overflow: hidden;
+}
+li {
+    color: #ff6b6b;
+    /* float: right; */
+    /* margin-top: -5px; */
+}
+li a {
+    font-family: 'Open Sans', sans-serif;
+    display: block;
+    block-size: 100%;
+    color: #ff6b6b;
+    background-color: #ffe66d;
+    text-align: center;
+    padding: 10px;
+    text-decoration: none;
+    float: right;
+}
+li a:hover {
+    background-color: #ff6b6b;
+    color: #ffe66d;
+}
