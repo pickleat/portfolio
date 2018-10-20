@@ -43,6 +43,9 @@ nav {
 #profile-photo {
     width: 100%;
     border-radius: 50%;
+    @media (max-width: 499px) {
+        width: 50%;
+    }
 }
 #profile-photo:hover {
     opacity: .5;
