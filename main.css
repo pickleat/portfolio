@@ -1,53 +1,29 @@
-/* Color Scheme 
-Mint Cream #f7fff7
-English Green #1a535c
-Medium Turquoise #4ecdc4
-Pastel Red #ff6b6b
-Maize #ffe66d
-*/ 
-/* Fonts
-<link href="https://fonts.googleapis.com/css?family=Open+Sans|Vollkorn" rel="stylesheet"> 
-font-family: 'Open Sans', sans-serif;
-font-family: 'Vollkorn', serif; 
-*/
-
 body {
-    margin: 0;
-    background: #f7fff7;
-    font-family: 'Open Sans', sans-serif;
+  background-color: #FFFFFF;
 }
-h1 {
-    color: #1a535c;
-    font-family: 'Vollkorn', serif;
-    margin-left: 5px;
+
+h1 h2 h3 h4 h5 h6 {
+  color: #1B263B;
 }
-#navBar {
-    background-color: #ffe66d;
-    color: #f7fff7;
+
+nav {
+  background-color: #119DA4;
+  color: #FFFFFF;
 }
-ul {
-    list-style-type: none;
-    margin: 0px;
-    padding: 0px;
-    overflow: hidden;
+nav ul {
+  list-style: none;
+  display: flex;
 }
-li {
-    color: #ff6b6b;
-    /* float: right; */
-    /* margin-top: -5px; */
+nav a {
+  color: #FFFFFF;
 }
-li a {
-    font-family: 'Open Sans', sans-serif;
-    display: block;
-    block-size: 100%;
-    color: #ff6b6b;
-    background-color: #ffe66d;
-    text-align: center;
-    padding: 10px;
-    text-decoration: none;
-    float: right;
+nav a:hover {
+  color: #E0E1DD;
 }
-li a:hover {
-    background-color: #ff6b6b;
-    color: #ffe66d;
+
+#profile-photo {
+  width: 100%;
+  border-radius: 50%;
 }
+
+/*# sourceMappingURL=main.css.map */

@@ -1,19 +1,36 @@
-<!Doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
     <head>
+        <link rel="icon" href="favicon-1024.png">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="https://fonts.googleapis.com/css?family=Open+Sans|Vollkorn" rel="stylesheet">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
         <link rel="stylesheet" type="text/css" href="main.css" />
-        <title>Andy Pickle's Front End Developer</title>
+        <title>Andy Pickle: Front End Developer</title>
     </head>
-    <div id="navBar">
+    <nav class="navbar-expand-lg fixed-top">
         <ul>
-            <li><a href="contact.html">Contact</a></li>
-            <li><a href="projects.html">Projects</a></li>
-            <li><a href="aboutme.html">About Me</a></li>
-            <li><a href="homepage.html">Home</a></li>
+            <li><a class="nav-link" href="homepage.html">Home</a></li>
+            <li><a class="nav-link" href="aboutme.html">About</a></li>
+            <li><a class="nav-link" href="projects.html">Projects</a></li>
+            <li><a class="nav-link" href="contact.html">Contact</a></li>
         </ul>
-    </div>
-    <body>
-       <h1>Andy Pickle's HomePage</h1>
+    </nav>
+    
+    <body class="container" style="margin-top: 75px">
+        <h1 style="text-align:center">Andy Pickle's HomePage</h1>
+        <div class="row" style="margin: 25px">
+            <div class="col-4">
+                <img src="family.jpg" id="profile-photo">
+            </div>
+            <div class="col-8">
+                <p>I am a Little Rock, Arkansas based Front-End Web Developer. Specializing in Python, JavaScript, and HTML/CSS. </p>
+            </div>
+        </div>
+        <div> 
+            <p> Section 1.10.32 of "de Finibus Bonorum et Malorum", written by Cicero in 45 BC
+                "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"
+            </p>
+        </div>
     </body>
 </html>
