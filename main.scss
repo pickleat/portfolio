@@ -1,0 +1,51 @@
+$Black: #09121B;
+$Blue: #1B263B;
+$LightBlue: #119DA4;
+$Red: #CC0000;
+$Grey: #6E7271;
+$LightGrey: #E0E1DD;
+$White: #FFFFFF;
+
+body {
+    background-color: $White;
+}
+
+h1 {
+    margin-top: 75px;
+    text-align: center;
+}
+
+nav {
+    background-color: $LightBlue;
+    color: $White;
+    ul {
+        list-style: none;
+        display: flex;
+    }
+    a {
+        color: $White;
+    }
+    a:hover {
+        color: $LightGrey;
+    }
+}
+#profile {
+    padding: 25px; 
+    // background-color: rgba(204, 0, 0, .5)
+}
+#profile-photo {
+    width: 100%;
+    border-radius: 50%;
+}
+#profile-photo:hover {
+    opacity: .5;
+}
+body {
+    background-color: $Blue;
+    color: $White;
+    padding: 5px;
+}
+.social-link {
+    height: 150px;
+    margin: 25px;
+}
