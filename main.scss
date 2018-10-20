@@ -7,9 +7,12 @@ $LightGrey: #E0E1DD;
 $White: #FFFFFF;
 
 h1 {
-    margin-top: 75px;
+    margin-top: 10px;
     text-align: center;
     font-size: 50px;
+    @media (max-width: 499px) {
+        margin-top: 0px;
+    }
 }
 
 nav {
@@ -25,6 +28,12 @@ nav {
     }
     a:hover {
         color: $Red;
+    }
+}
+
+.nav-link {
+    @media (max-width: 499px) {
+        font-size: 16px;
     }
 }
 #profile {
@@ -62,6 +71,9 @@ body {
 #medium {
     color: $Black;
 }
+#email {
+    color: $Red;
+}
 a {
     color: $LightBlue;
 }
@@ -70,4 +82,7 @@ a:hover {
 }
 p {
     font-size: 36px;
+    @media (max-width: 499px) {
+        font-size: 24px;
+    }
 }
