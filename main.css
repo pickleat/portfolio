@@ -2,8 +2,9 @@ body {
   background-color: #FFFFFF;
 }
 
-h1 h2 h3 h4 h5 h6 {
-  color: #1B263B;
+h1 {
+  margin-top: 75px;
+  text-align: center;
 }
 
 nav {
@@ -21,9 +22,28 @@ nav a:hover {
   color: #E0E1DD;
 }
 
+#profile {
+  padding: 25px;
+}
+
 #profile-photo {
   width: 100%;
   border-radius: 50%;
+}
+
+#profile-photo:hover {
+  opacity: 0.5;
+}
+
+body {
+  background-color: #1B263B;
+  color: #FFFFFF;
+  padding: 5px;
+}
+
+.social-link {
+  height: 150px;
+  margin: 25px;
 }
 
 /*# sourceMappingURL=main.css.map */
