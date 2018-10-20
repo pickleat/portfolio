@@ -25,3 +25,4 @@ Your stylesheets must use at least one SCSS variable, at least one example of SC
     x SCSS
 In README.md, include a short writeup describing your project, what’s contained in each file, and (optionally) any other additional information the staff should know about your project.
     Write this:
+    For my Project0 I decided to take this opportunity to make a portfolio website. I spent a lot of time learning how to utilize the power of Bootstrap. I created a landing page, and then links for more info About me, Portfolio, and How to Connect. 

@@ -96,4 +96,9 @@ p {
   }
 }
 
+table {
+  table-layout: auto;
+  border: solid 1px;
+}
+
 /*# sourceMappingURL=main.css.map */
