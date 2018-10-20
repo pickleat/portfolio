@@ -1,15 +1,13 @@
-body {
-  background-color: #FFFFFF;
-}
-
 h1 {
   margin-top: 75px;
   text-align: center;
+  font-size: 50px;
 }
 
 nav {
-  background-color: #119DA4;
+  background-color: #1B263B;
   color: #FFFFFF;
+  font-size: 24px;
 }
 nav ul {
   list-style: none;
@@ -19,7 +17,7 @@ nav a {
   color: #FFFFFF;
 }
 nav a:hover {
-  color: #E0E1DD;
+  color: #CC0000;
 }
 
 #profile {
@@ -36,14 +34,46 @@ nav a:hover {
 }
 
 body {
-  background-color: #1B263B;
-  color: #FFFFFF;
+  background-color: #FFFFFF;
+  color: #1B263B;
   padding: 5px;
 }
 
 .social-link {
-  height: 150px;
-  margin: 25px;
+  color: #1B263B;
+  font-size: 100px;
+}
+
+#twitter {
+  color: #1DA1F2;
+}
+
+#github {
+  color: black;
+}
+
+#linkedin {
+  color: #0077B5;
+}
+
+#instagram {
+  color: #09121B;
+}
+
+#medium {
+  color: #09121B;
+}
+
+a {
+  color: #119DA4;
+}
+
+a:hover {
+  color: #E0E1DD;
+}
+
+p {
+  font-size: 36px;
 }
 
 /*# sourceMappingURL=main.css.map */
