@@ -7,6 +7,9 @@ $LightGrey: #E0E1DD;
 $White: #FFFFFF;
 
 h1 {
+    font-family: Open Sans, Arial, sans-serif;
+    font-weight: bold;
+    color: $LightBlue;
     margin-top: 75px;
     text-align: center;
     font-size: 50px;
@@ -82,7 +85,7 @@ a:hover {
     color: $LightGrey;
 }
 p {
-    font-size: 36px;
+    font-size: 30px;
     @media (max-width: 499px) {
         font-size: 24px;
     }
@@ -107,4 +110,7 @@ table {
     a:hover {
         color: $Red;
     }
+}
+div {
+    font-family: open sans, helvetica, sans-serif; 
 }
