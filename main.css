@@ -17,6 +17,7 @@ nav {
   background-color: #1B263B;
   color: #FFFFFF;
   font-size: 24px;
+  font-family: Open Sans, Arial, sans-serif;
 }
 nav ul {
   list-style: none;
@@ -50,6 +51,7 @@ nav a:hover {
 
 body {
   background-color: #FFFFFF;
+  font-family: Open Sans, Arial, sans-serif;
   color: #1B263B;
   padding: 5px;
 }
@@ -93,6 +95,7 @@ a:hover {
 
 p {
   font-size: 30px;
+  font-family: Open Sans, Arial, sans-serif;
 }
 @media (max-width: 499px) {
   p {

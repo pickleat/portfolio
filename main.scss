@@ -5,9 +5,10 @@ $Red: rgb(150, 0, 0);
 $Grey: #6E7271;
 $LightGrey: #E0E1DD;
 $White: #FFFFFF;
+$FontFamily: Open Sans, Arial, sans-serif;
 
 h1 {
-    font-family: Open Sans, Arial, sans-serif;
+    font-family: $FontFamily;
     font-weight: bold;
     color: $LightBlue;
     margin-top: 75px;
@@ -23,6 +24,7 @@ nav {
     background-color: $Blue;
     color: $White;
     font-size: 24px;
+    font-family: $FontFamily;
     ul {
         list-style: none;
         display: flex;
@@ -53,6 +55,7 @@ nav {
 }
 body {
     background-color: $White;
+    font-family: $FontFamily;
     color: $Blue;
     padding: 5px;
 }
@@ -86,6 +89,7 @@ a:hover {
 }
 p {
     font-size: 30px;
+    font-family: $FontFamily;
     @media (max-width: 499px) {
         font-size: 24px;
     }
