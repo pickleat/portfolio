@@ -1,28 +1,33 @@
 # Project 0
 
-Your website must contain at least four different .html pages, and it should be possible to get from any page on your website to any other page by following one or more hyperlinks.
-    x 1 - Home Page - navigation, what the page is for
-    x 2 - About Me (personal) - remember people don't actually care about your family in your professional about
-    x 3 - Projects, for now put links to your best code repositories. 
-    x 4 - Contact, just links like AliSpit.tel
-    404 error page :) 
-Your website must include at least one list (ordered or unordered), at least one table, and at least one image.
-    x List
-    x Table
-    x Image
-Your website must have at least one stylesheet file.
-    x CSS File
-Your stylesheet(s) must use at least five different CSS properties, and at least five different types of CSS selectors. You must use the #id selector at least once, and the .class selector at least once.
-    5 Properties
-    5 Selectors
-    x ID
-    x Class
-Your stylesheet(s) must include at least one mobile-responsive @media query, such that something about the styling changes for smaller screens.
-    x @media query
-You must use Bootstrap 4 on your website, taking advantage of at least one Bootstrap component, and using at least two Bootstrap columns for layout purposes using Bootstrap’s grid model.
-    x Bootstrap
-Your stylesheets must use at least one SCSS variable, at least one example of SCSS nesting, and at least one use of SCSS inheritance.
-    x SCSS
+
+
+
+
+
+
 In README.md, include a short writeup describing your project, what’s contained in each file, and (optionally) any other additional information the staff should know about your project.
     Write this:
-    For my Project0 I decided to take this opportunity to make a portfolio website. I spent a lot of time learning how to utilize the power of Bootstrap. I created a landing page, and then links for more info About me, Portfolio, and How to Connect. 
+Overview: 
+    For my Project0 I decided to take this opportunity to make a portfolio website. I spent a lot of time learning how to utilize the power of Bootstrap. I created a landing page, and then links for more info About me, Portfolio, How to Connect, as well as a fun 404 Error page. I took a lot of inspiration for the layout and pages from AliSpit.tel, shoutout to her if she happens to read this!
+Index.Html/Home
+    This is my home landing page, with a navbar (on all pages) as well as a profile photo and a short about me. I am anticipating getting real headshots taken soon. But I had to use the best picture I could find for the time being. 
+About
+    Intended to give a bit more information about me. I used this page to put the timeline of where I've lived in my life for the Table requirement of the assignment. I will make this more of a professional resume as my experience allows. Point was to keep it short and sweet and let people know what I'm interested in. 
+Projects:
+    Utilized the Bootstrap 4 Cards to create cards for my projects. I don't have very many, but in the future I'd like to have it organized by type of project or language.
+Connect:
+    Wanted a simple page that had links to get in touch with me. In the future I'll probably add a portion for any freelance work I happen to be open to. 
+
+
+
+ToDos:
+    Index.HTML:
+        None Currently
+    About Me:
+        Delete Table
+    Projects:
+        Do some more finished projects so I show more of my skillzzz 
+    Connect:
+        Update the Email portion to either work via a webform (could be a fun mini-project)
+    
