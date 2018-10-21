@@ -3,12 +3,12 @@
 Your website must contain at least four different .html pages, and it should be possible to get from any page on your website to any other page by following one or more hyperlinks.
     x 1 - Home Page - navigation, what the page is for
     x 2 - About Me (personal) - remember people don't actually care about your family in your professional about
-    3 - Projects, for now put links to your best code repositories. 
+    x 3 - Projects, for now put links to your best code repositories. 
     x 4 - Contact, just links like AliSpit.tel
     404 error page :) 
 Your website must include at least one list (ordered or unordered), at least one table, and at least one image.
     x List
-    Table
+    x Table
     x Image
 Your website must have at least one stylesheet file.
     x CSS File

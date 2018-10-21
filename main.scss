@@ -1,17 +1,18 @@
 $Black: #09121B;
 $Blue: #1B263B;
 $LightBlue: #119DA4;
-$Red: #CC0000;
+$Red: rgb(150, 0, 0);
 $Grey: #6E7271;
 $LightGrey: #E0E1DD;
 $White: #FFFFFF;
 
 h1 {
-    margin-top: 10px;
+    margin-top: 75px;
     text-align: center;
     font-size: 50px;
     @media (max-width: 499px) {
-        margin-top: 0px;
+        margin-top: 50px;
+        font-size: 36px;
     }
 }
 
@@ -89,4 +90,21 @@ p {
 table {
     table-layout: auto;
     border: solid 1px;
+}
+.card-text {
+    font-size: 12px;
+}
+.card-body {
+    background-color: $LightGrey;
+}
+.card {
+    h5, p{
+        color: $Blue;
+    }
+    a {
+        color: $LightBlue;
+    }
+    a:hover {
+        color: $Red;
+    }
 }

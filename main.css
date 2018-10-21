@@ -1,11 +1,12 @@
 h1 {
-  margin-top: 10px;
+  margin-top: 75px;
   text-align: center;
   font-size: 50px;
 }
 @media (max-width: 499px) {
   h1 {
-    margin-top: 0px;
+    margin-top: 50px;
+    font-size: 36px;
   }
 }
 
@@ -22,7 +23,7 @@ nav a {
   color: #FFFFFF;
 }
 nav a:hover {
-  color: #CC0000;
+  color: #960000;
 }
 
 @media (max-width: 499px) {
@@ -76,7 +77,7 @@ body {
 }
 
 #email {
-  color: #CC0000;
+  color: #960000;
 }
 
 a {
@@ -99,6 +100,24 @@ p {
 table {
   table-layout: auto;
   border: solid 1px;
+}
+
+.card-text {
+  font-size: 12px;
+}
+
+.card-body {
+  background-color: #E0E1DD;
+}
+
+.card h5, .card p {
+  color: #1B263B;
+}
+.card a {
+  color: #119DA4;
+}
+.card a:hover {
+  color: #960000;
 }
 
 /*# sourceMappingURL=main.css.map */
