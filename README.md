@@ -10,6 +10,8 @@
     Utilized the Bootstrap 4 Cards to create cards for my projects. I don't have very many, but in the future I'd like to have it organized by type of project or language.
 ## **Connect:**
     Wanted a simple page that had links to get in touch with me. In the future I'll probably add a portion for any freelance work I happen to be open to. 
+## **404 Error**
+    I've always wanted to make an error page like this, so I did. 
 
 
 
