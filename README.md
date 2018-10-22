@@ -16,6 +16,8 @@
 
 
 ## ToDos:
+### All/Larger:
+    1. Update the navbar "Home" link to https://pickleat.github.io and not index.html. 
 ### Index.HTML:
     1. None Currently
 ### About Me:
