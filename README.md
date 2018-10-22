@@ -13,13 +13,13 @@
 
 
 
-ToDos:
-    Index.HTML:
-        1. None Currently
-    About Me:
-        1. Delete Table
-    Projects:
-        1. Do some more finished projects so I show more of my skillzzz 
-    Connect:
-        1. Update the Email portion to either work via a webform (could be a fun mini-project)
+## ToDos:
+### Index.HTML:
+    1. None Currently
+### About Me:
+    1. Delete Table
+### Projects:
+    1. Do some more finished projects so I show more of my skillzzz 
+### Connect:
+    1. Update the Email portion to either work via a webform (could be a fun mini-project)
     
