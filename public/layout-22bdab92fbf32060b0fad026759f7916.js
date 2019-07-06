@@ -8,7 +8,7 @@ const ListLink = props => (
 )
 
 export default ({children}) => (
-    <div style={{ margin: `2rem`, padding: `0 1rem`, maxWidth: `625px` }}>
+    <div style={{ margin: `3rem`, maxWidth: 650, padding: `0 1rem` }}>
         <header style={{ marginBottom: `1.5rem` }}>
             <Link to="/" style={{ textShadow: `none`, backgroundImage: `none`}}>
                 <h3 style={{ display: `inline` }}>@pickleat</h3>
@@ -18,6 +18,7 @@ export default ({children}) => (
                 <ListLink to="/contact/">Contact</ListLink>
                 <ListLink to="/blog/">Blog</ListLink>
                 <ListLink to="/projects/">Projects</ListLink>
+
             </ul>
         </header>
         {children}
