@@ -11,7 +11,7 @@ I'm so thankful that we did that, because I've honestly never been asked technic
 
 So I've been reviewing some foundational JavaScript concepts because it'd be good for me to memorize what they do and how to use them. Instead of having to have to look it up each time. Yesterday I posted this code snippet in a [tweet](https://twitter.com/pickleat/status/1147156504233033729?s=20) and it seemed to be pretty helpful to folks, so here's a bit more explanation.
 
-![.map()](/static/arrayMapReduceFilter-1e8e40d908929d481f0e46bba274e3b2.png)
+![.map()](https://pbs.twimg.com/media/D-uEwR8X4AEN9n5?format=jpg&name=large)
 
 ## Array.map()
 
