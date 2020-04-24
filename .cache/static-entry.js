@@ -3,8 +3,19 @@ const fs = require(`fs`)
 const { join } = require(`path`)
 const { renderToString, renderToStaticMarkup } = require(`react-dom/server`)
 const { ServerLocation, Router, isRedirect } = require(`@reach/router`)
-const { get, merge, isObject, flatten, uniqBy } = require(`lodash`)
+const {
+  get,
+  merge,
+  isObject,
+  flatten,
+  uniqBy,
+  flattenDeep,
+  replace,
+  concat,
+  memoize,
+} = require(`lodash`)
 
+const { RouteAnnouncerProps } = require(`./route-announcer-props`)
 const apiRunner = require(`./api-runner-ssr`)
 const syncRequires = require(`./sync-requires`)
 const { version: gatsbyVersion } = require(`gatsby/package.json`)
@@ -50,10 +61,37 @@ const getPageDataUrl = pagePath => {
   return `${__PATH_PREFIX__}/${pageDataPath}`
 }
 
-const getPageDataFile = pagePath => {
+const getPageData = pagePath => {
   const pageDataPath = getPageDataPath(pagePath)
-  return join(process.cwd(), `public`, pageDataPath)
+  const absolutePageDataPath = join(process.cwd(), `public`, pageDataPath)
+  const pageDataRaw = fs.readFileSync(absolutePageDataPath)
+
+  try {
+    return JSON.parse(pageDataRaw.toString())
+  } catch (err) {
+    return null
+  }
 }
+
+const appDataPath = join(`page-data`, `app-data.json`)
+
+const getAppDataUrl = memoize(() => {
+  let appData
+
+  try {
+    const absoluteAppDataPath = join(process.cwd(), `public`, appDataPath)
+    const appDataRaw = fs.readFileSync(absoluteAppDataPath)
+    appData = JSON.parse(appDataRaw.toString())
+
+    if (!appData) {
+      return null
+    }
+  } catch (err) {
+    return null
+  }
+
+  return `${__PATH_PREFIX__}/${appDataPath}`
+})
 
 const loadPageDataSync = pagePath => {
   const pageDataPath = getPageDataPath(pagePath)
@@ -69,10 +107,26 @@ const loadPageDataSync = pagePath => {
 
 const createElement = React.createElement
 
-const sanitizeComponents = components => {
+export const sanitizeComponents = components => {
+  const componentsArray = ensureArray(components)
+  return componentsArray.map(component => {
+    // Ensure manifest is always loaded from content server
+    // And not asset server when an assetPrefix is used
+    if (__ASSET_PREFIX__ && component.props.rel === `manifest`) {
+      return React.cloneElement(component, {
+        href: replace(component.props.href, __ASSET_PREFIX__, ``),
+      })
+    }
+    return component
+  })
+}
+
+const ensureArray = components => {
   if (Array.isArray(components)) {
-    // remove falsy items
-    return components.filter(val => (Array.isArray(val) ? val.length > 0 : val))
+    // remove falsy items and flatten
+    return flattenDeep(
+      components.filter(val => (Array.isArray(val) ? val.length > 0 : val))
+    )
   } else {
     // we also accept single components, so we need to handle this case as well
     return components ? [components] : []
@@ -142,9 +196,11 @@ export default (pagePath, callback) => {
     postBodyComponents = sanitizeComponents(components)
   }
 
-  const pageDataRaw = fs.readFileSync(getPageDataFile(pagePath))
-  const pageData = JSON.parse(pageDataRaw)
+  const pageData = getPageData(pagePath)
   const pageDataUrl = getPageDataUrl(pagePath)
+
+  const appDataUrl = getAppDataUrl()
+
   const { componentChunkName } = pageData
 
   class RouteHandler extends React.Component {
@@ -174,16 +230,13 @@ export default (pagePath, callback) => {
     }
   }
 
-  const routerElement = createElement(
-    ServerLocation,
-    { url: `${__BASE_PATH__}${pagePath}` },
-    createElement(
-      Router,
-      {
-        baseuri: `${__BASE_PATH__}`,
-      },
-      createElement(RouteHandler, { path: `/*` })
-    )
+  const routerElement = (
+    <ServerLocation url={`${__BASE_PATH__}${pagePath}`}>
+      <Router id="gatsby-focus-wrapper" baseuri={__BASE_PATH__}>
+        <RouteHandler path="/*" />
+      </Router>
+      <div {...RouteAnnouncerProps} />
+    </ServerLocation>
   )
 
   const bodyComponent = apiRunner(
@@ -225,7 +278,7 @@ export default (pagePath, callback) => {
       const fetchKey = `assetsByChunkName[${s}]`
 
       let chunks = get(stats, fetchKey)
-      let namedChunkGroups = get(stats, `namedChunkGroups`)
+      const namedChunkGroups = get(stats, `namedChunkGroups`)
 
       if (!chunks) {
         return null
@@ -244,7 +297,7 @@ export default (pagePath, callback) => {
 
       const childAssets = namedChunkGroups[s].childAssets
       for (const rel in childAssets) {
-        chunks = merge(
+        chunks = concat(
           chunks,
           childAssets[rel].map(chunk => {
             return { rel, name: chunk }
@@ -304,7 +357,18 @@ export default (pagePath, callback) => {
         rel="preload"
         key={pageDataUrl}
         href={pageDataUrl}
-        crossOrigin="use-credentials"
+        crossOrigin="anonymous"
+      />
+    )
+  }
+  if (appDataUrl) {
+    headComponents.push(
+      <link
+        as="fetch"
+        rel="preload"
+        key={appDataUrl}
+        href={appDataUrl}
+        crossOrigin="anonymous"
       />
     )
   }
@@ -340,10 +404,8 @@ export default (pagePath, callback) => {
       }
     })
 
-  const webpackCompilationHash = pageData.webpackCompilationHash
-
   // Add page metadata for the current page
-  const windowPageData = `/*<![CDATA[*/window.pagePath="${pagePath}";window.webpackCompilationHash="${webpackCompilationHash}";/*]]>*/`
+  const windowPageData = `/*<![CDATA[*/window.pagePath="${pagePath}";/*]]>*/`
 
   postBodyComponents.push(
     <script

@@ -2,9 +2,6 @@ var plugins = [{
       plugin: require('/Users/Andy/Desktop/portfolio/pickleat.github.io/node_modules/gatsby-plugin-manifest/gatsby-ssr'),
       options: {"plugins":[],"name":"Andy Pickle's personal portfolio site","short_name":"Andy Pickle's Personal Site","start_url":"/","background_color":"#ffffff","theme_color":"#58b8dd","display":"standalone","icon":"src/images/icon.png"},
     },{
-      plugin: require('/Users/Andy/Desktop/portfolio/pickleat.github.io/node_modules/gatsby-plugin-typography/gatsby-ssr'),
-      options: {"plugins":[],"pathToConfigModule":"src/utils/typography"},
-    },{
       plugin: require('/Users/Andy/Desktop/portfolio/pickleat.github.io/node_modules/gatsby-plugin-offline/gatsby-ssr'),
       options: {"plugins":[]},
     },{

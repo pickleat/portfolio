@@ -7,7 +7,7 @@ For about two weeks I've been applying for jobs. Sadly, the startup I was workin
 
 Short story, he absolutely roasted me.
 
-I'm so thankful that we did that, because I've honestly never been asked technical questions in an interview like that. I just cracked under the pressue. I wasn't that I don't know how to reverse a list. I just couldn't remember how to do it on demand.
+I'm so thankful that we did that, because I've honestly never been asked technical questions in an interview like that. I just cracked under the pressure. I wasn't that I don't know how to reverse a list. I just couldn't remember how to do it on demand.
 
 So I've been reviewing some foundational JavaScript concepts because it'd be good for me to memorize what they do and how to use them. Instead of having to have to look it up each time. Yesterday I posted this code snippet in a [tweet](https://twitter.com/pickleat/status/1147156504233033729?s=20) and it seemed to be pretty helpful to folks, so here's a bit more explanation.
 
@@ -51,7 +51,7 @@ Whatever condition you pass will be checked for each item in the array and it wi
 [from MDN:](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce)
 > The reduce() method executes a reducer function (that you provide) on each element of the array, resulting in a single output value.
 
-This one is just a bit more complicated, because there are more arguments. But in its simplest form you can take an array and perform the same function on each element to recieve back a single value. Back to our numbers array
+This one is just a bit more complicated, because there are more arguments. But in its simplest form you can take an array and perform the same function on each element to receive back a single value. Back to our numbers array
 
 ```js
 let numbers = [1,2,3,4,5]
@@ -60,6 +60,6 @@ console.log(numbers)
 // 15
 ```
 
-Keep in mind the computation you do will be done on each item in the array, and the `accumulator` is the running total. There are also optional arguments of `currentIndex` and `array` that follow the currentvalue (before the arrow function) but I won't get into those here.
+Keep in mind the computation you do will be done on each item in the array, and the `accumulator` is the running total. There are also optional arguments of `currentIndex` and `array` that follow the `currentValue` (before the arrow function) but I won't get into those here.
 
 Hope this helps!

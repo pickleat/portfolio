@@ -1,0 +1,6 @@
+<!-- Original Zondicon -->
+<!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M7.667 12H2v8H0V0h12l.333 2H20l-3 6 3 6H8l-.333-2z"/></svg> -->
+<!-- Updated in Figma -->
+<svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M16.8136 23.7536L16.6049 22.5H15.334H4H2.5V24V38.5H1.5V1.5H22.7291L23.1864 4.24636L23.3951 5.5H24.666H37.5729L32.6584 15.3292L32.3229 16L32.6584 16.6708L37.5729 26.5H17.2709L16.8136 23.7536Z" stroke="#223043" stroke-width="3"/>
+</svg>
