@@ -1,13 +1,13 @@
 import React from "react"
-import { Link } from "gatsby"
+// import { Link } from "gatsby"
 import '../style/tailwind.css'
 import background from '../images/topography.svg'
 
-const ListLink = props => (
-    <li>
-        <Link to={props.to}>{props.children}</Link>
-    </li>
-)
+// const ListLink = props => (
+//     <li>
+//         <Link to={props.to}>{props.children}</Link>
+//     </li>
+// )
 
 // const Footer = () => {
 //     return(<footer className="text-center text-yellow-100 text-xs">© Andy Pickle 2020</footer>)   
