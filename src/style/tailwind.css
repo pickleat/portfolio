@@ -929,9 +929,13 @@ h1 {
 }
 
 h2 {
-  font-size: 3rem;
+  font-size: 1.875rem;
+  color: #223043;
+  font-weight: 700;
+  text-transform: lowercase;
+  letter-spacing: 0.025em;
   font-family: 'Montserrat' system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  font-weight: 900;
+  /* font-weight: 900; */
 }
 
 p {
@@ -978,7 +982,13 @@ html {
 }
 
 .blue-link:hover {
-  text-decoration: underline;
+  -webkit-text-decoration-color: #2A4365;
+          text-decoration-color: #2A4365;
+  -webkit-text-decoration-line: underline;
+          text-decoration-line: underline;
+  -webkit-text-decoration-skip: ink;
+          text-decoration-skip-ink: auto;
+  color: #3182ce;
 }
 
 .sr-only {

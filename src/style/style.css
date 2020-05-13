@@ -243,9 +243,10 @@ h1 {
 }
 
 h2 {
-    @apply text-5xl;
+    @apply text-3xl text-navy font-bold lowercase tracking-wide;
     font-family: 'Montserrat' system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-    font-weight: 900;
+    /* font-weight: 900; */
+    
 }
 
 p {
@@ -264,7 +265,10 @@ html {
   @apply text-blue-800 font-bold 
 }
 .blue-link:hover {
-  @apply underline;
+  text-decoration-color: #2A4365;
+  text-decoration-line: underline;
+  text-decoration-skip-ink: auto;
+  @apply text-blue-600;
 }
 
 @tailwind utilities;

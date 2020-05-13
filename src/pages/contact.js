@@ -1,9 +1,13 @@
 import React from "react"
 import Layout from "../components/layout"
+import Heading from "../components/Heading"
 
 export default () => (
     <Layout>
-    <div>
+        <Heading title="Contact" svg='contact'/>
+        <div className='bg-yellow-100 text-navy px-10 pb-10 w-full md:max-w-6xl'>
+            <h2>Get in Touch</h2>
+        <div>
         <h3><i>I'm currently open to job offers for full-time or freelance web-development work.</i></h3>
         <p>If you get in touch, I would love to send you my resume.</p>
         <div>
@@ -21,6 +25,7 @@ export default () => (
         </a> */}
         </ul>
         </div>
+    </div>
     </div>
     </Layout>
 )

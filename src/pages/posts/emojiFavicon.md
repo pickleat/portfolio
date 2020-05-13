@@ -1,6 +1,7 @@
 ---
 title: "Add an Emoji Favicon to your site"
 date: "2019-06-23"
+tags: ['frontend', 'html']
 ---
 
 > Originally I posted this to my dev.to profile in Nov, 2018; you can read it [here](https://dev.to/pickleat/add-an-emoji-favicon-to-your-site-co2) if you'd like. I decided to repost it on my blog, since I wrote it and all.
@@ -11,7 +12,7 @@ For starters, if you don't know what a favicon is, don't fret! I didn't until re
 
 ![Example of Website Favicons](https://raw.githubusercontent.com/pickleat/dev.to/master/Screen%20Shot%202018-11-08%20at%201.22.49%20PM.png)
 
-I've been working on a project1 for CS50 for web-programming class. The assignment: build a book review website, using Flask and PostgreSQL. While I was working on it, I got bit miffed that my site wasn't looking very professional. I was using Bootstrap, for the ease of formatting, but that wasn't looking great, just a tad better than the default. I decided adding a favicon would help a bit, but I didn't want to mess with making a logo or finding a picture and scaling it, so I thought. Maybe an emoji would work? It did, fantastically! 
+I've been working on a project for CS50 for web-programming class. The assignment: build a book review website, using Flask and PostgreSQL. While I was working on it, I got bit miffed that my site wasn't looking very professional. I was using Bootstrap, for the ease of formatting, but that wasn't looking great, just a tad better than the default. I decided adding a favicon would help a bit, but I didn't want to mess with making a logo or finding a picture and scaling it, so I thought. Maybe an emoji would work? It did, fantastically! 
 
 I decided it would be painless to find the emoji I wanted and then just add it to my `<head>` of my template.html. Here's how the code ended up looking:
 

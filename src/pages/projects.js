@@ -1,27 +1,67 @@
 import React from "react"
+import { graphql } from 'gatsby'
 import Layout from "../components/layout"
+import Heading from "../components/heading"
 
-export default () => (
-    <Layout>
-        <h1>Projects</h1>
-        <h2><a href="https://protege.dev">Protege.dev</a></h2>
-        <p>A job-board for Junior Remote Devs. Built by me and a two friends </p>
-        <h3>Technologies Used</h3>
-        <ul>
-            <li><a href="https://reactjs.org/">React</a></li>
-            <li><a href="https://tailwindcss.com">TailWind CSS</a></li>
-            <li><a href="https://jaredpalmer.com/formik/">Formik</a></li>
-            <li><a href="https://quilljs.com/">Quill - a WYSIWYG Editor</a></li>
-        </ul>
-        <h2><a href="https://coffeecodex.co">CoffeeCodex.co</a></h2>
-        <p>A database of specialty coffees. A CRUD application complete with user-ratings.</p>
-        <h3>Technologies Used</h3>
-        <ul>
-            <li>AWS: Lambda, DynamoDB, API Gateway, CloudWatch</li>
-            <li><a href="https://serverless.com/">Serverless <span role='img' aria-label="lightning-bolt-emoji">⚡️</span> Framework</a></li>
-            <li>Vanilla JavaScript</li>
-            <li><a href="https://https://tailwindcss.com">TailWind CSS</a></li>
-            <li><a href="https://auth0.com">Auth0</a></li>
-        </ul>
-    </Layout>
-)
+export default ({ data }) => {
+    const projects = data.projects.edges
+    const tags = data.tags.group
+    return (
+        <Layout>
+            <Heading title='Projects' svg='project'/>
+            <div className='bg-yellow-100 text-navy px-10 pb-10 w-full md:max-w-6xl'>
+                <h2>A selection of projects...</h2>
+                <div className='flex'>
+                    <div className='flex flex-col w-3/5'>
+                    {projects.map(({ node }, index) => (
+                        <div className='pt-8 ' key={node.id}>
+                            <a className='blue-link text-xl' href={node.fields.slug}>{node.frontmatter.title}</a>
+                            <p className='py-4'>{node.excerpt}</p>
+                            <div className='flex justify-end'>
+                            </div>
+                        </div>
+                    ))}
+                    </div>
+                    <div className='flex flex-col w-2/5'>
+                        <div className='ml-2 pl-4 border-solid border-navy border-4'>
+                            <h5 className='text-2xl font-bold text-left'>Tags:</h5>
+                            <ul className='py-2'>
+                            {tags.map(element => (
+                                <li key={element.tag} className='font-bold'>{element.tag}: ({element.totalCount})</li>
+                            ))}  
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </Layout>
+    )
+}
+
+export const query = graphql`
+    query projects {
+        projects: allMarkdownRemark(filter: {frontmatter: {tags: {eq: "project"}}}, sort: {fields: frontmatter___title, order: ASC}) {
+            edges {
+                node {
+                id
+                frontmatter {
+                    date
+                    title
+                    tags
+                }
+                fields {
+                    slug
+                }
+                fileAbsolutePath
+                excerpt(pruneLength: 160)
+                }
+            }
+        }
+        tags: allMarkdownRemark(filter: {frontmatter: {tags: {eq: "project"}}}) {
+            group(field: frontmatter___tags) {
+              tag: fieldValue
+              totalCount
+            }
+          }
+    }
+`

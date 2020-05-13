@@ -1,6 +1,7 @@
 ---
 title: ".map(), .filter(), and .reduce()"
 date: "2019-07-06"
+tags: ['javascript', 'frontend']
 ---
 
 For about two weeks I've been applying for jobs. Sadly, the startup I was working at just didn't work out. I am super bummed it didn't work out, but that's how things go sometimes. Anyway, I've been posting on [twitter](https://twitter.com/pickleat) that I'm looking around and such and I had a friend offer to do a mock interview.
@@ -22,7 +23,7 @@ You have an array, and you need to do something to every element. That's what ma
 
 ```js
 let numbers = [1,2,3,4,5]
-numbers = numbers.map(numb=> numb+1)
+numbers = numbers.map(numb=> numb + 1)
 console.log(numbers)
 // will be [2,3,4,5,6]
 ```
@@ -55,7 +56,8 @@ This one is just a bit more complicated, because there are more arguments. But i
 
 ```js
 let numbers = [1,2,3,4,5]
-numbers.reduce( (accumulator, currentValue) => accumulator + currentValue )
+numbers.reduce(
+    (accumulator, currentValue) => accumulator + currentValue )
 console.log(numbers)
 // 15
 ```
