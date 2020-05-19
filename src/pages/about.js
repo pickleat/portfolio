@@ -1,6 +1,7 @@
 import React from "react"
 import { Link } from "gatsby"
 import Layout from "../components/layout"
+import InnerLayout from "../components/innerLayout"
 import Heading from "../components/Heading"
 
 export default ({data}) => {
@@ -8,7 +9,7 @@ export default ({data}) => {
     return(
         <Layout>
             <Heading svg='coffee' title='About'/>
-            <div className='bg-yellow-100 text-navy px-10 pb-10 w-full md:max-w-6xl'>
+            <InnerLayout>
                 <h2 className=''>a little about me...</h2>
                 <div className='sm:flex pt-2'>
                     <h3 className='font-black lowercase tracking-tight text-3xl'>tl;dr</h3>
@@ -76,7 +77,7 @@ export default ({data}) => {
                         </ul>
                     </div>
                 </div>
-            </div>
+            </InnerLayout>
         </Layout>
     )
 }

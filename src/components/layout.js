@@ -16,7 +16,7 @@ const Layout = ({children}) => {
                 <svg className='fill-current text-yellow-100 h-6 w-6' viewBox="0 0 51 50" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M20.1954 50H7.57329V25H0L25.2443 0L50.4886 25H42.9153V50H30.2932V35H20.1954V50Z" /></svg>
             </Link>  
             <FlyoutMenu />
-            <div className='mx-auto w-full md:max-w-3xl py-32'>
+            <div className='mx-auto w-full md:max-w-3xl py-12 sm:py-32'>
             {children}
             </div>
         </div>

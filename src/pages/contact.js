@@ -26,7 +26,7 @@ export default () => (
                         <img className='h-10' src={LinkedInLogo} />
                     </a>
             </div>
-                <form className='my-4 sm:mx-12 p-4 flex flex-col '>
+                <form className='my-4 sm:mx-12 sm:p-4 flex flex-col '>
                     <label className='font-bold' for='name'>Name</label>
                     <input className='bg-yellow-100 border-2 border-solid border-navy' type='text' name='name' required></input>
                     <label className='font-bold' for='email'>Email</label>

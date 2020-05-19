@@ -1,6 +1,7 @@
 import React from "react"
 import { graphql, Link } from 'gatsby'
 import Layout from "../components/layout"
+import InnerLayout from "../components/innerLayout"
 import Heading from "../components/heading"
 
 export default ({ data }) => {
@@ -9,7 +10,7 @@ export default ({ data }) => {
     return (
         <Layout>
             <Heading title='Projects' svg='project'/>
-            <div className='bg-yellow-100 text-navy px-10 pb-10 w-full md:max-w-6xl'>
+            <InnerLayout>
                 <h2>A selection of projects...</h2>
                 <div className='flex'>
                     <div className='flex flex-col w-full sm:w-3/5'>
@@ -37,7 +38,7 @@ export default ({ data }) => {
                         </div>
                     </div>
                 </div>
-            </div>
+            </InnerLayout>
         </Layout>
     )
 }
