@@ -12,6 +12,8 @@ exports.components = {
   "component---src-pages-contact-js": hot(preferDefault(require("/Users/Andy/Desktop/portfolio/pickleat.github.io/src/pages/contact.js"))),
   "component---src-pages-index-js": hot(preferDefault(require("/Users/Andy/Desktop/portfolio/pickleat.github.io/src/pages/index.js"))),
   "component---src-pages-projects-js": hot(preferDefault(require("/Users/Andy/Desktop/portfolio/pickleat.github.io/src/pages/projects.js"))),
-  "component---src-templates-blog-post-js": hot(preferDefault(require("/Users/Andy/Desktop/portfolio/pickleat.github.io/src/templates/blog-post.js")))
+  "component---src-pages-tags-js": hot(preferDefault(require("/Users/Andy/Desktop/portfolio/pickleat.github.io/src/pages/tags.js"))),
+  "component---src-templates-blog-post-js": hot(preferDefault(require("/Users/Andy/Desktop/portfolio/pickleat.github.io/src/templates/blog-post.js"))),
+  "component---src-templates-single-tag-js": hot(preferDefault(require("/Users/Andy/Desktop/portfolio/pickleat.github.io/src/templates/single-tag.js")))
 }
 

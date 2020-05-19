@@ -920,10 +920,6 @@ video {
 }
 
 h1 {
-  font-size: 4rem;
-  color: #fffff0;
-  letter-spacing: -0.025em;
-  text-transform: uppercase;
   font-family: 'Montserrat' system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-weight: 900;
 }

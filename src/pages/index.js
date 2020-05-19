@@ -20,7 +20,9 @@ export default ({data}) => {
             document.getElementById(`text-${num}`).classList = 'hidden'
         })
     }
-
+    const projects = data.projects.edges
+    const blogs = data.blogs.edges
+    console.log(projects)
     return (
     <div className='mx-auto bg-navy h-screen bg-center bg-repeat' style={{backgroundImage: `url(${background})`}}>
         <div className='mx-auto w-full md:max-w-3xl py-32'>
@@ -68,26 +70,26 @@ export default ({data}) => {
                         </div>
                         <div id='text-2' className='hidden'>
                             <h3 className='text-center text-2xl font-bold'>Projects</h3>
-                            <ul className='text-left'>
-                                <li className=''>
-                                    <a className='blue-link' href="https://protege.dev/">Protege.dev</a>
-                                    <p>a job-board for junior remote devs! </p>
-                                </li>
-                                <br />
-                                <li className=''>
-                                    <a className='blue-link' href="https://coffeecodex.co/">CoffeeCodex.co</a>
-                                    <p>A site for coffee-lovers like myself to track all the different origins of coffee they've had.</p>
-                                </li>
-                            </ul>  
+                            <p className='pb-2'>Here's my most recent projects.</p>
+                            <ul className='list-inside list-disc flex-grow'>
+                                {projects.map(({node}, index) => (
+                                    <li className='pl-2' key={node.id}>
+                                        <Link to={node.fields.slug} className='blue-link'>{node.frontmatter.title}</Link>
+                                        <p></p>
+                                    </li>
+                                ))}
+                            </ul> 
+                            <div className='text-right'>
+                                <Link className='blue-link' to='/projects'>See all Projects</Link>
+                            </div>
                         </div>
                         <div id='text-3' className='hidden'>
                             <h3 className='text-center text-2xl font-bold'>Blog</h3>
-                            <p className='pb-2'>Here's my most recent posts. <br />
-                            You can also read them on <a className='blue-link' href='https://dev.to/pickleat'>Dev.to</a></p>
+                            <p className='pb-2'>Here's my most recent posts.</p>
                             <ul className='list-inside list-disc flex-grow'>
-                            {data.allMarkdownRemark.edges.map(({ node }, index) => (
+                            {blogs.map(({ node }, index) => (
                                 <li className='pl-2' key={node.id}>
-                                    <a className='blue-link' href={node.fields.slug}>{node.frontmatter.title}</a>
+                                    <Link className='blue-link' to={node.fields.slug}>{node.frontmatter.title}</Link>
                                 </li>
                             ))}
                             </ul>
@@ -136,7 +138,7 @@ export default ({data}) => {
 
 export const query = graphql`
   query {
-    allMarkdownRemark(sort: {fields: [frontmatter___date], order: DESC}, limit: 3) {
+    blogs: allMarkdownRemark(sort: {fields: [frontmatter___date], order: DESC}, filter: {frontmatter: {tags: {ne: "project"}}}, limit: 3) {
       edges {
         node {
           frontmatter {
@@ -148,6 +150,23 @@ export const query = graphql`
           fileAbsolutePath
         }
       }
+    }
+    projects: allMarkdownRemark(filter: {frontmatter: {tags: {eq: "project"}}}, sort: {fields: frontmatter___date, order: DESC}) {
+        edges {
+            node {
+            id
+            frontmatter {
+                date
+                title
+                tags
+            }
+            fields {
+                slug
+            }
+            fileAbsolutePath
+            excerpt(pruneLength: 160)
+            }
+        }
     }
   }  
 `

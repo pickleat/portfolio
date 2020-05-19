@@ -2,6 +2,7 @@
 title: "Add an Emoji Favicon to your site"
 date: "2019-06-23"
 tags: ['frontend', 'html']
+devto: 'https://dev.to/pickleat/add-an-emoji-favicon-to-your-site-co2'
 ---
 
 > Originally I posted this to my dev.to profile in Nov, 2018; you can read it [here](https://dev.to/pickleat/add-an-emoji-favicon-to-your-site-co2) if you'd like. I decided to repost it on my blog, since I wrote it and all.

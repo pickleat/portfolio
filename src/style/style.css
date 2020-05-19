@@ -237,7 +237,6 @@
   
 
 h1 {
-    @apply text-6xl text-yellow-100 tracking-tight uppercase;
     font-family: 'Montserrat' system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     font-weight: 900;
 }

@@ -2,6 +2,7 @@
 title: ".map(), .filter(), and .reduce()"
 date: "2019-07-06"
 tags: ['javascript', 'frontend']
+devto: 'https://dev.to/pickleat/map-filter-and-reduce-2efb'
 ---
 
 For about two weeks I've been applying for jobs. Sadly, the startup I was working at just didn't work out. I am super bummed it didn't work out, but that's how things go sometimes. Anyway, I've been posting on [twitter](https://twitter.com/pickleat) that I'm looking around and such and I had a friend offer to do a mock interview.

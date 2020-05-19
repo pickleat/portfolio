@@ -15,22 +15,24 @@ Here's an example of what could be provided from a user typing an input in the e
 
 ```html
 <div>
-    <h1>An Example Heading!</h1>
-    <p><br></p>
-    <p>Here's a bunch of paragraph text that shows you
-    <strong>how awesome it is</strong>
-    to write here!</p>
-    <p><br></p>
-    <p>Here's a list: </p>
-    <ul>
-        <li>Item</li>
-        <li>Another Item</li
-        ><li>A Third Item</li>
-    </ul>
-    <p><br></p>
+  <h1>An Example Heading!</h1>
+  <p><br></p>
+  <p>Here's some paragraph text that shows you how
+  <strong>awesome</strong>
+  it is to write with QuillJS!</p>
+  <p><br></p>
+  <p>Here's a list: </p>
+  <ul>
+      <li>Item</li>
+      <li>Another Item</li
+      ><li>A Third Item</li>
+  </ul>
+  <p><br></p>
 </div>
 
 ```
+
+[Gist of the Code Above](https://gist.github.com/pickleat/0e264dffe787e104edb2cd0b2919233a.js)
 
 Easy right? Maybe? If you have a perfect CSS system or if you don't need to apply any classes dynamically...
 
@@ -42,16 +44,16 @@ Not terrible, if you are __sure__ of how the elements will be nested. After some
 First I created an object of the classes I wanted to apply to each tag. Reminder: we're using [Tailwind CSS](tailwindcss.com) utility classes.
 
 ```js
- const quillStyle = {
-    h1: 'text-blue-500 font-bold text-xl',
-    h2: 'text-blue-500 font-bold text-lg',
-    h3: 'text-blue-500 font-bold text-md',
-    a: 'text-teal-600 font-bold',
-    p: 'text-blue-300',
-    ol: 'list-decimal list-inside',
-    ul: 'list-disc list-inside',
-    li: 'pl-2 text-blue-300',
-  }
+const quillStyle = {
+  h1: 'text-blue-500 font-bold text-xl',
+  h2: 'text-blue-500 font-bold text-lg',
+  h3: 'text-blue-500 font-bold text-md',
+  a: 'text-teal-600 font-bold',
+  p: 'text-blue-300',
+  ol: 'list-decimal list-inside',
+  ul: 'list-disc list-inside',
+  li: 'pl-2 text-blue-300',
+}
 
 ```
 
@@ -61,51 +63,55 @@ It looked like this:
 
 ```js
 useEffect(() => {
-    // Cleans up the text provided by QuillJS wysiwyg
-    function styleChildren(children) {
-      children.forEach((child) => {
-        if (child.tagName === 'H1') {
-          child.classList = quillStyle.h1
-        }
-        if (child.tagName === 'H2') {
-          child.classList = quillStyle.h2
-        }
-        if (child.tagName === 'H3') {
-          child.classList = quillStyle.h3
-        }
-        if (child.tagName === 'P') {
-          child.classList = quillStyle.p
-        }
-        if (child.tagName === 'A') {
-          child.classList = quillStyle.a
-        }
-        if (child.tagName === 'OL') {
-          child.classList = quillStyle.ol
-          let listItems = [...child.children]
-          listItems.forEach((listItem) => {
-            listItem.classList = quillStyle.li
-          })
-        }
-        if (child.tagName === 'UL') {
-          child.classList = quillStyle.ul
-          let listItems = [...child.children]
-          listItems.forEach((listItem) => {
-            listItem.classList = quillStyle.li
-          })
-        }
-        if (child.tagName === 'LI') {
-          child.classList = quillStyle.li
-        }
-      })
-    }
-    var jobDesc = document.getElementById('jobDesc')
-    var jobChildren = [...jobDesc.children]
-    styleChildren(jobChildren)
-    // removed other code that doesn't apply to this post...
-  })
+  // Cleans up the text provided by QuillJS wysiwyg
+  function styleChildren(children) {
+    children.forEach((child) => {
+      if (child.tagName === 'H1') {
+        child.classList = quillStyle.h1
+      }
+      if (child.tagName === 'H2') {
+        child.classList = quillStyle.h2
+      }
+      if (child.tagName === 'H3') {
+        child.classList = quillStyle.h3
+      }
+      if (child.tagName === 'P') {
+        child.classList = quillStyle.p
+      }
+      if (child.tagName === 'A') {
+        child.classList = quillStyle.a
+      }
+      if (child.tagName === 'OL') {
+        child.classList = quillStyle.ol
+        let listItems = [...child.children]
+        listItems.forEach((listItem) => {
+          listItem.classList = quillStyle.li
+        })
+      }
+      if (child.tagName === 'UL') {
+        child.classList = quillStyle.ul
+        let listItems = [...child.children]
+        listItems.forEach((listItem) => {
+          listItem.classList = quillStyle.li
+        })
+      }
+      if (child.tagName === 'LI') {
+        child.classList = quillStyle.li
+      }
+    })
+  }
+  var jobDesc = document.getElementById('jobDesc')
+  var jobChildren = [...jobDesc.children]
+  styleChildren(jobChildren)
+  // removed other code that doesn't apply to this post...
+})
 ```
 
-You can see its very much a brute force, and not very elegant. But hey, it got the job done.
-The struggle initially was that I wasn't sure exactly how deeply nested the html elements would be. However I solved the problem for the time being and moved on to other parts of the application. 
+You can see its very much a brute force, but, it got the job done.
+The struggle initially was that I wasn't sure exactly how deeply nested the html elements would be. However I solved the problem for the time being and moved on to other parts of the application.
 
 ## The More Elegant Solution
+
+## How I found the solution
+
+## Closing Remarks

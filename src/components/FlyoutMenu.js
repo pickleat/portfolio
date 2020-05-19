@@ -7,7 +7,7 @@ function FlyoutMenu({props}){
     // need to implement clicking anywhere outside the bg-yellow-100 will also close the menu
     if(menuOpen){
         return(
-            <div id='flyout-menu' className='absolute top-0 right-0 pr-4 pt-4 bg-yellow-100 w-1/3 h-full border-navy border-solid border-4 text-navy'>
+            <div id='flyout-menu' className='absolute top-0 right-0 pr-4 pt-4 bg-yellow-100 w-full sm:w-1/2 lg:w-1/3 h-full border-navy border-solid border-4 text-navy'>
                 <nav className='flex flex-col'>
                     <button className='flex justify-end' onClick={() => {setMenuOpen(false)}}>
                         <svg className='h-6 w-6 fill-current text-navy' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M10 8.586L2.929 1.515 1.515 2.929 8.586 10l-7.071 7.071 1.414 1.414L10 11.414l7.071 7.071 1.414-1.414L11.414 10l7.071-7.071-1.414-1.414L10 8.586z"/></svg>

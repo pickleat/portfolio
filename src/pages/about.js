@@ -10,11 +10,11 @@ export default ({data}) => {
             <Heading svg='coffee' title='About'/>
             <div className='bg-yellow-100 text-navy px-10 pb-10 w-full md:max-w-6xl'>
                 <h2 className=''>a little about me...</h2>
-                <div className='flex pt-2'>
+                <div className='sm:flex pt-2'>
                     <h3 className='font-black lowercase tracking-tight text-3xl'>tl;dr</h3>
-                    <p className="pl-4">I'm a self-taught, front-end web developer from Little Rock, Arkansas. I enjoy writing React and Tailwind, but I've worked with lots of other tech.</p>
+                    <p className="sm:pl-4">I'm a self-taught, front-end web developer from Little Rock, Arkansas. I enjoy writing React and Tailwind, but I've worked with lots of other tech.</p>
                 </div>
-                <div className='p-4'>
+                <div className='py-4 sm:p-4'>
                     <hr className='text-navy border-top border-solid border-navy border-2' />
                 </div>
                 <div>
@@ -58,14 +58,23 @@ export default ({data}) => {
                 </div>
                 <div>
                     <h5 className='font-black lowercase tracking-tight text-3xl' id='certifications'>Certifications and Courses</h5>
-                    <div className='flex items-center'>
+                    <div className='sm:flex items-center'>
                         <span className='font-black lowercase tracking-tight text-2xl'>2019</span>
-                        <div className='pl-4 flex flex-col'>
-                            <a className="blue-link" id='MITxCert' href='https://courses.edx.org/certificates/a1125794c0da482480daf407490f3b28'>MITx: Intro to Computer Science</a>
-                            <a className="blue-link" id='fCCxCert' href='https://www.freecodecamp.org/certification/pickleat/javascript-algorithms-and-data-structures'>freeCodeCamp JavaScript Algorithms and Data Structures</a>
-                        </div>
+                        <ul className='sm:pl-4 flex flex-col'>
+                            <li>
+                               <a className="blue-link" id='MITxCert' href='https://courses.edx.org/certificates/a1125794c0da482480daf407490f3b28'>MITx: Intro to Computer Science</a>
+                            </li>
+                            <li>
+                                <a className="blue-link" id='fCCxCert' href='https://www.freecodecamp.org/certification/pickleat/javascript-algorithms-and-data-structures'>freeCodeCamp JavaScript Algorithms and Data Structures</a>
+                            </li>
+                        </ul>
+                        <span className='font-black lowercase tracking-tight text-2xl'>2020</span>
+                        <ul className='sm:pl-4 flex flex-col'>
+                            <li>
+                                <a className="blue-link" href='https://egghead.io/courses/just-enough-functional-programming-in-javascript'>Just Enough Functional Programming in JavaScript</a>
+                            </li>
+                        </ul>
                     </div>
-                    <span className='font-black lowercase tracking-tight text-2xl'>2020</span>
                 </div>
             </div>
         </Layout>
