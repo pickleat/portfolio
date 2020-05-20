@@ -1,13 +1,8 @@
 import React from "react"
 import { Link } from "gatsby"
 import '../style/tailwind.css'
-// import background from '../images/topography.svg'
 import background from '../images/topography-4.svg'
 import FlyoutMenu from "../components/FlyoutMenu.js"
-
-// const Footer = () => {
-//     return(<footer className="text-center text-yellow-100 text-xs">© Andy Pickle 2020</footer>)   
-// }
 
 const Layout = ({children}) => {
     return(

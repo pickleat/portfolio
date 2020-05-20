@@ -2,7 +2,8 @@ import React from "react"
 import { Link } from "gatsby"
 import Layout from "../components/layout"
 import InnerLayout from "../components/innerLayout"
-import Heading from "../components/Heading"
+import Heading from "../components/H1HeadingAnd3Dots"
+import H2Heading from "../components/H2Heading"
 
 export default ({data}) => {
 
@@ -10,7 +11,7 @@ export default ({data}) => {
         <Layout>
             <Heading svg='coffee' title='About'/>
             <InnerLayout>
-                <h2 className=''>a little about me...</h2>
+                <H2Heading text="a little about me..." />
                 <div className='sm:flex pt-2'>
                     <h3 className='font-black lowercase tracking-tight text-3xl'>tl;dr</h3>
                     <p className="sm:pl-4">I'm a self-taught, front-end web developer from Little Rock, Arkansas. I enjoy writing React and Tailwind, but I've worked with lots of other tech.</p>

@@ -2,7 +2,8 @@ import React, { useEffect } from "react"
 import { graphql, Link } from "gatsby"
 import Layout from "../components/layout"
 import InnerLayout from "../components/innerLayout"
-import Heading from "../components/Heading"
+import Heading from "../components/H1HeadingAnd3Dots"
+import H2Heading from "../components/H2Heading"
 import BackButton from "../components/BackButton"
 
 export default ({ data }) => {
@@ -60,7 +61,7 @@ export default ({ data }) => {
                 : <Heading title='Blog Post' svg='writing'/>
             }
             <InnerLayout>
-                <h2>{post.frontmatter.title}</h2>
+                <H2Heading text={post.frontmatter.title} />
                 <div className='flex flex-col sm:flex-row justify-between'>
                 <span className='max-w-lg'>
                     <BackButton to='blog' text='Back to all Posts' />

@@ -1,11 +1,11 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
-// import Layout from "../components/layout"
 import background from '../images/topography-4.svg'
-import Heading from "../components/Heading"
+import Heading from "../components/H1HeadingAnd3Dots"
+import H2Heading from "../components/H2Heading"
 import LinkedIn from '../images/icons/linkedin.svg'
 
-
+// The Index / Homepage uses a different layout than the other pages because it is centered both horizontally and vertially. 
 
 export default ({data}) => {
     function showLine(num){
@@ -22,15 +22,14 @@ export default ({data}) => {
     }
     const projects = data.projects.edges
     const blogs = data.blogs.edges
-    console.log(projects)
     return (
     <div className='mx-auto bg-navy h-screen bg-center bg-repeat' style={{backgroundImage: `url(${background})`}}>
-        <div className='mx-auto w-full md:max-w-3xl py-32'>
-            <Heading title='Andy Pickle'/>
+        <div className='mx-auto w-full md:max-w-3xl py-16 sm:py-32'>
+            <Heading title='Andy Pickles'/>
             <div className='bg-yellow-100 text-navy px-10 pb-10 w-full md:max-w-6xl'>
-                <h2 className=''>frontend developer</h2>
+                <H2Heading text='frontend developer'/>
                 <div className='flex'>
-                    <div className='flex flex-col w-1/3 justify-around py-8'>
+                    <div className='hidden sm:flex flex-col w-1/3 justify-around py-8'>
                         <Link className='flex items-center hover:underline' onMouseOver={() => {showLine(1)}} onFocus={() => {showLine(1)}} to="/about">
                             <svg className="flex-shrink-0 stroke-current h-6 w-6"  viewBox="0 0 40 36" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 20V18.5H8H4C3.33696 18.5 2.70107 18.2366 2.23223 17.7678L1.20371 18.7963L2.23223 17.7678C1.76339 17.2989 1.5 16.663 1.5 16V8C1.5 6.62843 2.62843 5.5 4 5.5H8H9.5V4V1.5H34.5V20C34.5 21.7239 33.8152 23.3772 32.5962 24.5962C31.3772 25.8152 29.7239 26.5 28 26.5H16C14.2761 26.5 12.6228 25.8152 11.4038 24.5962C10.1848 23.3772 9.5 21.7239 9.5 20ZM8 17.5H9.5V16V8V6.5H8H4H2.5V8V16V17.5H4H8ZM12.3541 34.5L6.3541 31.5H37.6459L31.6459 34.5H12.3541Z" strokeWidth="3"/></svg>
                             <span className="font-bold text-2xl pl-2">About</span>

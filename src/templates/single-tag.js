@@ -1,14 +1,14 @@
-import React, { useEffect } from "react"
+import React from "react"
 import { Link, graphql } from "gatsby"
 import InnerLayout from "../components/innerLayout"
 import Layout from "../components/layout"
-import Heading from "../components/Heading"
+import Heading from "../components/H1HeadingAnd3Dots"
+import H2Heading from "../components/H2Heading"
 import BackButton from "../components/BackButton"
 
 export default ({ pageContext, data }) => {
     const { tag } = pageContext
-    console.log(tag)
-    const { edges, totalCount } = data.allMarkdownRemark
+    const { edges } = data.allMarkdownRemark
     const tagHeader = `tag: "${tag}"`
     // const tagHeader = `post${totalCount === 1 ? "" : "s"} "${tag}"`
 
@@ -16,7 +16,7 @@ export default ({ pageContext, data }) => {
     <Layout>
       <Heading title='Tagged Posts' svg='writing'/>
       <InnerLayout>
-        <h2>{tagHeader}</h2>
+        <H2Heading text={tagHeader} />
         <BackButton to='tags' text='Back to all Tags'/>
         <>
             {edges.map(({ node }) => {
@@ -24,7 +24,7 @@ export default ({ pageContext, data }) => {
                 const { title } = node.frontmatter
                 return (
                   <div className='pt-8 ' key={node.id}>
-                    <Link className='blue-link text-xl' to={node.fields.slug}>{node.frontmatter.title}</Link>
+                    <Link className='blue-link text-xl' to={slug}>{title}</Link>
                     <p className='py-4'>{node.excerpt}</p>
                     <div className='flex justify-end'>
                       <span className='text-right text-sm'><i>Reading Time: {node.timeToRead}mins</i></span>

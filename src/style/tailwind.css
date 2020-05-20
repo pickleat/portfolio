@@ -925,11 +925,6 @@ h1 {
 }
 
 h2 {
-  font-size: 1.875rem;
-  color: #223043;
-  font-weight: 700;
-  text-transform: lowercase;
-  letter-spacing: 0.025em;
   font-family: 'Montserrat' system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   /* font-weight: 900; */
 }

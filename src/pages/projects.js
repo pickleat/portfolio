@@ -2,7 +2,8 @@ import React from "react"
 import { graphql, Link } from 'gatsby'
 import Layout from "../components/layout"
 import InnerLayout from "../components/innerLayout"
-import Heading from "../components/heading"
+import Heading from "../components/H1HeadingAnd3Dots"
+import H2Heading from "../components/H2Heading"
 
 export default ({ data }) => {
     const projects = data.projects.edges
@@ -11,7 +12,7 @@ export default ({ data }) => {
         <Layout>
             <Heading title='Projects' svg='project'/>
             <InnerLayout>
-                <h2>A selection of projects...</h2>
+                <H2Heading text="A selection of projects..." />
                 <div className='flex'>
                     <div className='flex flex-col w-full sm:w-3/5'>
                     {projects.map(({ node }, index) => (

@@ -1,7 +1,7 @@
 import React from 'react'
 
 import Layout from "../components/layout"
-import Heading from "../components/Heading"
+import Heading from "../components/H1HeadingAnd3Dots"
 
 export default ({ data }) => {
     console.log(data)

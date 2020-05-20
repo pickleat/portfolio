@@ -2,7 +2,8 @@ import React from 'react'
 import { graphql, Link } from 'gatsby'
 import Layout from "../components/layout"
 import InnerLayout from "../components/innerLayout"
-import Heading from "../components/Heading"
+import Heading from "../components/H1HeadingAnd3Dots"
+import H2Heading from "../components/H2Heading"
 import BackButton from "../components/BackButton"
 
 export default ({ data }) => {
@@ -12,7 +13,7 @@ export default ({ data }) => {
         <Layout>
           <Heading title='Blog Posts' svg='writing' />
           <InnerLayout>
-            <h2>all posts</h2>
+            <H2Heading text="all posts" />
             <span className='sm:hidden'>
               <BackButton to='tags' text='All Tags'/>
             </span>

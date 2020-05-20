@@ -1,13 +1,14 @@
 import React from "react"
 import Layout from "../components/layout"
-import Heading from "../components/Heading"
+import Heading from "../components/H1HeadingAnd3Dots"
+import H2Heading from "../components/H2Heading"
 import LinkedInLogo from "../images/icons/LI-In-Bug.png"
 
 export default () => (
     <Layout>
         <Heading title="Contact" svg='contact'/>
         <div className='bg-yellow-100 text-navy px-10 pb-10 w-full md:max-w-6xl'>
-            <h2>Get in Touch!</h2>
+            <H2Heading text='Get in Touch!'/>
             <p className='font-bold text-lg sm:text-xl pt-4'>
             Feel free to reach out to me on any of these platforms, or fill out the contact form below. <br />
             I am currently looking for a front-end developer role, so if you’d like to speak about that write “hiring” in the subject and I’ll send my resume!
@@ -23,17 +24,17 @@ export default () => (
                         <svg className='h-10 w-10' viewBox="0 0 45 51" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12.0656 20.7476C11.6759 20.4588 11.2852 20.3143 10.8954 20.3143H9.14364V30.7205H10.8964C11.2862 30.7205 11.6769 30.5761 12.0666 30.2872C12.4564 29.9984 12.6512 29.5651 12.6512 28.9863V22.0485C12.6502 21.4708 12.4544 21.0365 12.0656 20.7476ZM40.5904 3.1875H4.4096C1.97879 3.1875 0.00602679 5.13885 0 7.55039V43.4496C0.00602679 45.8612 1.97879 47.8125 4.4096 47.8125H40.5904C43.0222 47.8125 44.994 45.8612 45 43.4496V7.55039C44.994 5.13885 43.0212 3.1875 40.5904 3.1875ZM15.4888 29.0053C15.4888 30.8789 14.3227 33.7178 10.6312 33.7118H5.97054V17.2304H10.7297C14.2895 17.2304 15.4868 20.0653 15.4878 21.94L15.4888 29.0053ZM25.6018 20.1739H20.25V24.0009H23.5215V26.9463H20.25V30.7723H25.6028V33.7178H19.357C18.236 33.7467 17.3039 32.8681 17.2758 31.7565V19.2943C17.2487 18.1837 18.1356 17.2613 19.2556 17.2334H25.6028L25.6018 20.1739ZM36.0121 31.6579C34.6862 34.7208 32.3106 34.1112 31.2469 31.6579L27.3767 17.2344H30.6482L33.6325 28.562L36.6027 17.2344H39.8752L36.0121 31.6579Z" fill="black"/></svg>
                     </a>
                     <a href="https://www.linkedin.com/in/andy-pickle/">
-                        <img className='h-10' src={LinkedInLogo} />
+                        <img className='h-10' src={LinkedInLogo} alt='LinkedIn Logo' />
                     </a>
             </div>
                 <form className='my-4 sm:mx-12 sm:p-4 flex flex-col '>
-                    <label className='font-bold' for='name'>Name</label>
+                    <label className='font-bold' htmlFor='name'>Name</label>
                     <input className='bg-yellow-100 border-2 border-solid border-navy' type='text' name='name' required></input>
-                    <label className='font-bold' for='email'>Email</label>
+                    <label className='font-bold' htmlFor='email'>Email</label>
                     <input className='bg-yellow-100 border-2 border-solid border-navy' type='email' name='email' required></input>
-                    <label className='font-bold' for='reasonForContact'>Reason for Contact</label>
+                    <label className='font-bold' htmlFor='reasonForContact'>Reason for Contact</label>
                     <input className='bg-yellow-100 border-2 border-solid border-navy' type='text' name='reasonForContact' required></input>
-                    <label className='font-bold' for='message'>Message</label>
+                    <label className='font-bold' htmlFor='message'>Message</label>
                     <textarea rows='10' className='bg-yellow-100 border-2 border-solid border-navy' type='text' name='message' required></textarea>
                     <button className='bg-navy text-yellow-100 w-24 p-2 m-4' type='submit'>Submit</button>
                 </form>

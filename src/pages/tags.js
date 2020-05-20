@@ -4,7 +4,8 @@ import { Link, graphql } from "gatsby";
 // import { Helmet } from "react-helmet"
 import Layout from "../components/layout";
 import InnerLayout from "../components/innerLayout";
-import Heading from "../components/heading";
+import Heading from "../components/H1HeadingAnd3Dots"
+import H2Heading from "../components/H2Heading"
 import BackButton from "../components/BackButton";
 
 const TagsPage = ({
@@ -19,7 +20,8 @@ const TagsPage = ({
     {/* <Helmet title={title} /> */}
     <Heading title={"Tags"} svg="writing" />
     <InnerLayout>
-      <h2>All the Posts tagged on the Site</h2>
+    <H2Heading text='All tagged posts'/>
+      
       <BackButton to="blog" text="Back to Blog" />
       <div className="flex mt-4">
         <div className="flex flex-col w-3/5">
