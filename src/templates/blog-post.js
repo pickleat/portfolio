@@ -15,7 +15,7 @@ export default ({ data }) => {
         H5: 'p-2 font-bold text-md',
         H6: 'p-2 font-bold text-md',
         A: 'blue-link',
-        P: 'pt-4',
+        P: 'py-4',
         BLOCKQUOTE: 'ml-4 pl-4 border-solid border-navy border-l-4',
         PRE: 'bg-navy font-mono text-yellow-100 p-4',
         OL: 'list-decimal list-inside',
