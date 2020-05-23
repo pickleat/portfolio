@@ -1,7 +1,7 @@
 ---
 title: "CoffeeCodex.co"
 date: "2020-05-01"
-tags: ['project', 'javascript', 'tailwind', 'aws', 'lambda', 'auth0', 'dynamodb']
+tags: ['auth0', 'aws', 'dynamodb', 'javascript', 'lambda', 'project', 'tailwind', ]
 website: "https://coffeecodex.co"
 github: "https://github.com/pickleat/coffeeCodex"
 ---

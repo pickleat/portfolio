@@ -53,6 +53,10 @@ export default ({ data }) => {
 
     const post = data.markdownRemark
     const tags = post.frontmatter.tags
+    const backButtonData = {
+        text: tags.includes('project') ? 'Projects' : 'Posts', 
+        to: tags.includes('project') ? 'projects' : 'blog'
+    }
 
     return (
         <Layout>
@@ -64,7 +68,7 @@ export default ({ data }) => {
                 <H2Heading text={post.frontmatter.title} />
                 <div className='flex flex-col sm:flex-row justify-between'>
                 <span className='max-w-lg'>
-                    <BackButton to='blog' text='Back to all Posts' />
+                    <BackButton to={backButtonData.to} text={`Back to all ${backButtonData.text}`} />
                 </span>
                 <div className='flex flex-col mt-4 w-full sm:w-2/5'>
                     <div className='sm:ml-2 py-2 pl-4 border-solid border-navy border-4'>

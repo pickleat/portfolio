@@ -1,7 +1,7 @@
 ---
 title: "Portfolio Update"
 date: "2020-05-16"
-tags: ['project', 'react', 'figma', 'gatsby', 'tailwind',]
+tags: ['figma', 'gatsby', 'project', 'react', 'tailwind',]
 website: 'https://andypickle.dev'
 github: 'https://github.com/pickleat/portfolio'
 ---
