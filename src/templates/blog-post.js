@@ -8,12 +8,12 @@ import BackButton from "../components/BackButton"
 
 export default ({ data }) => {
     const blogStyle = {
-        H1: 'p-2 font-bold text-2xl',
-        H2: 'p-2 font-bold text-xl',
-        H3: 'p-2 font-bold text-lg',
-        H4: 'p-2 font-bold text-md',
-        H5: 'p-2 font-bold text-md',
-        H6: 'p-2 font-bold text-md',
+        H1: 'py-2 font-bold text-2xl',
+        H2: 'py-2 font-bold text-xl',
+        H3: 'py-2 font-bold text-lg',
+        H4: 'py-2 font-bold text-md',
+        H5: 'py-2 font-bold text-md',
+        H6: 'py-2 font-bold text-md',
         A: 'blue-link',
         P: 'py-4',
         BLOCKQUOTE: 'ml-4 pl-4 border-solid border-navy border-l-4',
