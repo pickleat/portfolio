@@ -5,9 +5,8 @@
   "version": "0.1.0",
   "license": "MIT",
   "scripts": {
-    "deploy": "gatsby build && gh-pages -d public -b master",
     "tailwind": "postcss src/style/style.css -o src/style/tailwind.css",
-    "build": "gatsby build",
+    "build": "gatsby build && tailwind",
     "develop": "gatsby develop && tailwind",
     "format": "prettier --write src/**/*.{js,jsx}",
     "start": "npm run develop",
