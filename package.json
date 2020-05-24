@@ -1,12 +1,12 @@
 {
-  "name": "gatsby-starter-hello-world",
+  "name": "Andy Pickle's Portfolio Site",
   "private": true,
-  "description": "A simplified bare-bones starter for Gatsby",
+  "description": "A portfolio site, to showcase my skils",
   "version": "0.1.0",
   "license": "MIT",
   "scripts": {
     "tailwind": "postcss src/style/style.css -o src/style/tailwind.css",
-    "build": "gatsby build && tailwind",
+    "build": "gatsby build",
     "develop": "gatsby develop && tailwind",
     "format": "prettier --write src/**/*.{js,jsx}",
     "start": "npm run develop",
