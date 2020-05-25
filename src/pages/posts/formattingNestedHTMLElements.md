@@ -1,7 +1,7 @@
 ---
-title: "Programatically Formatting Nested HTML Child Elements"
+title: "Programatically Formatting Nested HTML Child Elements in React"
 date: "2020-05-10"
-tags: ['frontend', 'html', 'react', 'javascript']
+tags: ['frontend', 'gatsby', 'html', 'javascript', 'react',]
 ---
 
 > Problem: Recieving HTML with nested children of an unknown depth that need to be formatted with CSS classes dynamically.

@@ -47,7 +47,7 @@ export default ({data}) => {
                     </p>
                     <p className="pt-4">
                         I took a job doing technical project managment at a design firm called <a className='blue-link' href="https://few.io">Few</a>. Most of our projects are websites or webapps for clients, with a few React Native projects mixed in. 
-                        I've managed the gamut of those type of projects, and have a great feel of how the development life-cycle. Scoping features and delivering on them, from a management point of view, although I've gotten a few PRs merged in my time at Few. 
+                        I've managed the gamut of those type of projects, and have a great feel of how the development life-cycle works. Scoping features and delivering on them, from a management point of view, although I've gotten a few PRs merged in my time at Few. 
                     </p>
                     <p className='pt-4'>
                         Now? Well currently I'm building <a className='blue-link' href='https://protege.dev'>Protege.dev</a> with my good friend <a className='blue-link' href='https://twitter.com/drewclemcr8'>Drew Clements</a>.
