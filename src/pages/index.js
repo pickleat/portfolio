@@ -95,7 +95,7 @@ export default ({data}) => {
                                 <li>Want to work together? Get in <Link className='blue-link' to='/contact'>touch!</Link></li>
                             </ul>
                             <div className='text-right'>
-                                <Link className="font-bold hover:text-blue-600 underline" to='/about'>More about me.</Link>
+                                <Link className="blue-link" to='/about'>More about me.</Link>
                             </div>
                         </div>
                         <div id='text-2' className='hidden'>

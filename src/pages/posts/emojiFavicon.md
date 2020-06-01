@@ -9,13 +9,13 @@ devto: 'https://dev.to/pickleat/add-an-emoji-favicon-to-your-site-co2'
 
 For my first post I thought I'd share a short little trick I learned that makes websites look better!  
 
-For starters, if you don't know what a favicon is, don't fret! I didn't until recently. Its the small thumbnail on your tab. If you use Google Chrome, it looks like this: 
+For starters, if you don't know what a favicon is, don't fret! I didn't until recently. Its the small thumbnail on your tab. If you use Google Chrome, it looks like this:d
 
 ![Example of Website Favicons](https://raw.githubusercontent.com/pickleat/dev.to/master/Screen%20Shot%202018-11-08%20at%201.22.49%20PM.png)
 
-I've been working on a project for CS50 for web-programming class. The assignment: build a book review website, using Flask and PostgreSQL. While I was working on it, I got bit miffed that my site wasn't looking very professional. I was using Bootstrap, for the ease of formatting, but that wasn't looking great, just a tad better than the default. I decided adding a favicon would help a bit, but I didn't want to mess with making a logo or finding a picture and scaling it, so I thought. Maybe an emoji would work? It did, fantastically! 
+I've been working on a project for CS50 for web-programming class. The assignment: build a book review website, using Flask and PostgreSQL. While I was working on it, I got bit miffed that my site wasn't looking professional. I was using Bootstrap, for the ease of formatting, but that wasn't looking great, a tad better than the default. I decided adding a favicon would help a bit, but I didn't want to mess with making a logo or finding a picture and scaling it, so I thought. Would an emoji would work? It did, fantastically!
 
-I decided it would be painless to find the emoji I wanted and then just add it to my `<head>` of my template.html. Here's how the code ended up looking:
+I decided it would be painless to find the emoji I wanted and add it to my `<head>` of my template.html. Here's how the code ended up looking:
 
 ![Code Screenshot](https://raw.githubusercontent.com/pickleat/dev.to/master/Screen%20Shot%202018-11-08%20at%201.34.58%20PM.png)
 
@@ -28,14 +28,11 @@ Here's how I did it:
 3. Right-Click on the emoji style you prefer (I chose the Apple version)
 4. Copy the link and insert into your `<head>` tag like so: `<link rel="icon" href="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/240/apple/155/books_1f4da.png">` OR if you are using [GatsbyJS](https://gatsbyjs.org/) you can download the file and save as `favicon.ico` into your static folder and it will inject it for you!.
 
-
 And you're done! I was using flask for this project, so I put this in the layout page and it dynamically puts in on any template that has the `{% extends "layout.html" %}` at the top of the .html doc.
 
 Here's how it looks!
 
 ![Look at the icon in the tab!](https://raw.githubusercontent.com/pickleat/dev.to/master/Screen%20Shot%202018-11-08%20at%201.36.46%20PM.png)
-
-As you can see, I'm still testing on a localhost, haven't quite finished the project yet, but it'll be on my [profile site](https://pickleat.github.io/), and its own [repo](https://github.com/pickleat/BookReviewSite) as well.
 
 ---
 
