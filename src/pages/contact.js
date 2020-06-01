@@ -73,18 +73,18 @@ export default () => {
                     >
                         <input type="hidden" name="form-name" value="portfolioSiteContact"/>
                         <p hidden>
-                        <label>Don’t fill this out: <input name="bot-field" 
-                        onChange={handleChange} 
-                        /></label>
+                        <label htmlFor='bot-field'>Don’t fill this out: 
+                            <input name="bot-field" id='bot-field' onChange={handleChange} />
+                        </label>
                         </p>
                         <label className='font-bold' htmlFor='name'>Name</label>
-                        <input className='bg-yellow-100 border-2 border-solid border-navy' type='text' name='name'  onChange={handleChange} required></input>
+                        <input className='bg-yellow-100 border-2 border-solid border-navy' type='text' name='name' id='name' onChange={handleChange} required></input>
                         <label className='font-bold' htmlFor='email'>Email</label>
-                        <input className='bg-yellow-100 border-2 border-solid border-navy' type='email' name='email' onChange={handleChange} required></input>
+                        <input className='bg-yellow-100 border-2 border-solid border-navy' type='email' name='email' id='email' onChange={handleChange} required></input>
                         <label className='font-bold' htmlFor='reasonForContact'>Reason for Contact</label>
-                        <input className='bg-yellow-100 border-2 border-solid border-navy' type='text' name='reasonForContact' onChange={handleChange} required></input>
+                        <input className='bg-yellow-100 border-2 border-solid border-navy' type='text' name='reasonForContact' id='reasonForContact' onChange={handleChange} required></input>
                         <label className='font-bold' htmlFor='message'>Message</label>
-                        <textarea rows='10' className='bg-yellow-100 border-2 border-solid border-navy' type='text' name='message' onChange={handleChange} required></textarea>
+                        <textarea rows='10' className='bg-yellow-100 border-2 border-solid border-navy' type='text' name='message' id='message' onChange={handleChange} required></textarea>
                         <button className='bg-navy text-yellow-100 w-24 p-2 m-4' type='submit'>Submit</button>
                     </form>
                 }
