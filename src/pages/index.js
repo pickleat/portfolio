@@ -30,7 +30,7 @@ export default ({data}) => {
         <div className='mx-auto w-full md:max-w-3xl py-16 sm:py-32'>
             <Heading title='Andy Pickle'/>
             <div className='bg-yellow-100 text-navy px-10 pb-20 sm:pb-20 w-full md:max-w-6xl'>
-                <H2Heading text='frontend developer'/>
+                <H2Heading text='frontend engineer'/>
                 <div className='flex flex-col sm:hidden font-bold text-2xl mt-2'>
                     <div className='flex justify-around'>
                         <button onClick={() => {showLine(1)}} className='flex items-center hover:text-blue-600 hover:underline pt-2' to='/about'>
