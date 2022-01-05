@@ -5,7 +5,7 @@ import Heading from "../components/H1HeadingAnd3Dots"
 import H2Heading from "../components/H2Heading"
 import LinkedIn from '../images/icons/linkedin.svg'
 
-// The Index / Homepage uses a different layout than the other pages because it is centered both horizontally and vertially. 
+// The Index / Homepage uses a different layout than the other pages because it is centered both horizontally and vertically. 
 
 export default ({data}) => {
     function showLine(num){
