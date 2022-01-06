@@ -7,7 +7,7 @@ import LinkedIn from '../images/icons/linkedin.svg'
 
 // The Index / Homepage uses a different layout than the other pages because it is centered both horizontally and vertically. 
 
-export default ({data}) => {
+const Index = ({data}) => {
     function showLine(num){
         let lineList = [1, 2, 3, 4]
         let shortList = lineList.filter(numb => numb !== num)
@@ -86,7 +86,7 @@ export default ({data}) => {
                             </h3>
                             <h4 className='text-center text-2xl font-bold'><span role='img' aria-label='hand-wave-emoji'>👋🏻</span> Hi, I'm Andy! </h4>
                             <p>
-                                I'm a developer from Little Rock, Arkansas. I used to co-own a coffee company but left to become a web-developer.
+                                I'm a UI Engineer from Little Rock, Arkansas. I used to co-own a coffee company but left to become a web-developer.
                                 Personally, I love my family, making coffee and cocktails, listening to music, and watching soccer.
                             </p>
                             <ul className='hidden sm:flex flex-col pl-2 py-2 mt-2 list-disc list-inside'>
@@ -168,6 +168,8 @@ export default ({data}) => {
     </div>
     )
 }
+
+export default Index
 
 export const query = graphql`
   query {
