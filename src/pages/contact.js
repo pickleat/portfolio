@@ -5,7 +5,7 @@ import Heading from "../components/H1HeadingAnd3Dots"
 import H2Heading from "../components/H2Heading"
 import LinkedInLogo from "../images/icons/LI-In-Bug.png"
 
-export default () => {
+const Contact = () => {
     const [submitted, setFormSubmitted] = useState(false)
     const [formData, setFormData] = useState({})
 
@@ -92,3 +92,5 @@ export default () => {
         </Layout>
     )
 }
+
+export default Contact

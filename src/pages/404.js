@@ -3,8 +3,7 @@ import React from 'react'
 import Layout from "../components/layout"
 import Heading from "../components/H1HeadingAnd3Dots"
 
-export default ({ data }) => {
-    console.log(data)
+const FourOhFour = ({ data }) => {
     return (
         <Layout>
           <div>
@@ -20,3 +19,4 @@ export default ({ data }) => {
     )
 }
 
+export default FourOhFour;

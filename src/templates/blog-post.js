@@ -6,7 +6,7 @@ import Heading from "../components/H1HeadingAnd3Dots"
 import H2Heading from "../components/H2Heading"
 import BackButton from "../components/BackButton"
 
-export default ({ data }) => {
+const BlogPost = ({ data }) => {
     const blogStyle = {
         H1: 'py-2 font-bold text-2xl',
         H2: 'py-2 font-bold text-xl',
@@ -110,6 +110,8 @@ export default ({ data }) => {
         </Layout>
     )
 }
+
+export default BlogPost
 
 export const query = graphql`
     query($slug: String!) {

@@ -6,7 +6,7 @@ import Heading from "../components/H1HeadingAnd3Dots"
 import H2Heading from "../components/H2Heading"
 import BackButton from "../components/BackButton"
 
-export default ({ data }) => {
+const Blog = ({ data }) => {
     const posts = data.posts.edges
     const tags = data.tags.group
     return (
@@ -53,6 +53,8 @@ export default ({ data }) => {
         </Layout>
     )
 }
+
+export default Blog
 
 export const query = graphql`
   query {

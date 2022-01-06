@@ -6,7 +6,7 @@ import Heading from "../components/H1HeadingAnd3Dots"
 import H2Heading from "../components/H2Heading"
 import BackButton from "../components/BackButton"
 
-export default ({ pageContext, data }) => {
+const SingleTag = ({ pageContext, data }) => {
     const { tag } = pageContext
     const { edges } = data.allMarkdownRemark
     const tagHeader = `tag: "${tag}"`
@@ -37,6 +37,8 @@ export default ({ pageContext, data }) => {
     </Layout>        
     )
 }
+
+export default SingleTag
 
 // Tags.propTypes = {
 //     pageContext: PropTypes.shape({

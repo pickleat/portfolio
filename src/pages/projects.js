@@ -5,7 +5,7 @@ import InnerLayout from "../components/innerLayout"
 import Heading from "../components/H1HeadingAnd3Dots"
 import H2Heading from "../components/H2Heading"
 
-export default ({ data }) => {
+const Projects = ({ data }) => {
     const projects = data.projects.edges
     const tags = data.tags.group
     return (
@@ -43,6 +43,8 @@ export default ({ data }) => {
         </Layout>
     )
 }
+
+export default Projects
 
 export const query = graphql`
     query projects {
