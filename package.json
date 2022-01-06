@@ -1,8 +1,8 @@
 {
   "name": "andy-pickle-portfolio",
   "private": true,
-  "description": "A portfolio site, to showcase my skils",
-  "version": "0.1.0",
+  "description": "A portfolio site, to showcase my skills",
+  "version": "1.0.0",
   "license": "MIT",
   "scripts": {
     "tailwind": "postcss src/style/style.css -o src/style/tailwind.css",
