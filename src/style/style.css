@@ -262,7 +262,7 @@ html {
   @apply text-blue-800 font-bold 
 }
 .blue-link:hover {
-  text-decoration-color: #2A4365;
+  text-decoration-color: #3182ce;
   text-decoration-line: underline;
   text-decoration-skip-ink: auto;
   @apply text-blue-600;

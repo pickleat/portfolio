@@ -29,7 +29,7 @@ const Index = ({data}) => {
     <div className='mx-auto bg-navy h-screen bg-center bg-repeat' style={{backgroundImage: `url(${background})`}}>
         <div className='mx-auto w-full md:max-w-3xl py-16 sm:py-32'>
             <Heading title='Andy Pickle'/>
-            <div className='bg-yellow-100 text-navy px-10 pb-20 sm:pb-20 w-full md:max-w-6xl'>
+            <div className='bg-yellow-50 text-navy px-10 pb-20 sm:pb-20 w-full md:max-w-6xl'>
                 <H2Heading text='frontend engineer'/>
                 <div className='flex flex-col sm:hidden font-bold text-2xl mt-2'>
                     <div className='flex justify-around'>

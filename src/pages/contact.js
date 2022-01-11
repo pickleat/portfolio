@@ -36,7 +36,7 @@ const Contact = () => {
     return(
         <Layout>
             <Heading title="Contact" svg='contact'/>
-            <div className='bg-yellow-100 text-navy px-10 pb-10 w-full md:max-w-6xl'>
+            <div className='bg-yellow-50 text-navy px-10 pb-10 w-full md:max-w-6xl'>
                 <H2Heading text='Get in Touch!'/>
                 <p className='font-bold text-lg sm:text-xl pt-4'>
                 Feel free to reach out to me on any of these platforms, or fill out the contact form below. <br />
@@ -78,14 +78,14 @@ const Contact = () => {
                         </label>
                         </p>
                         <label className='font-bold' htmlFor='name'>Name</label>
-                        <input className='bg-yellow-100 border-2 border-solid border-navy' type='text' name='name' id='name' onChange={handleChange} required></input>
+                        <input className='bg-yellow-50 border-2 border-solid border-navy' type='text' name='name' id='name' onChange={handleChange} required></input>
                         <label className='font-bold' htmlFor='email'>Email</label>
-                        <input className='bg-yellow-100 border-2 border-solid border-navy' type='email' name='email' id='email' onChange={handleChange} required></input>
+                        <input className='bg-yellow-50 border-2 border-solid border-navy' type='email' name='email' id='email' onChange={handleChange} required></input>
                         <label className='font-bold' htmlFor='reasonForContact'>Reason for Contact</label>
-                        <input className='bg-yellow-100 border-2 border-solid border-navy' type='text' name='reasonForContact' id='reasonForContact' onChange={handleChange} required></input>
+                        <input className='bg-yellow-50 border-2 border-solid border-navy' type='text' name='reasonForContact' id='reasonForContact' onChange={handleChange} required></input>
                         <label className='font-bold' htmlFor='message'>Message</label>
-                        <textarea rows='10' className='bg-yellow-100 border-2 border-solid border-navy' type='text' name='message' id='message' onChange={handleChange} required></textarea>
-                        <button className='bg-navy text-yellow-100 w-24 p-2 m-4' type='submit'>Submit</button>
+                        <textarea rows='10' className='bg-yellow-50 border-2 border-solid border-navy' type='text' name='message' id='message' onChange={handleChange} required></textarea>
+                        <button className='bg-navy text-yellow-50 w-24 p-2 m-4' type='submit'>Submit</button>
                     </form>
                 }
             </div>

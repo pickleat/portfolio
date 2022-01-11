@@ -17,17 +17,17 @@ const BlogPost = ({ data }) => {
         A: 'blue-link',
         P: 'py-4',
         BLOCKQUOTE: 'ml-4 pl-4 border-solid border-navy border-l-4',
-        PRE: 'bg-navy font-mono text-yellow-100 p-4',
+        PRE: 'bg-navy font-mono text-yellow-50 p-4',
         OL: 'list-decimal list-inside',
         UL: 'list-disc list-inside',
         LI: 'pl-2',
         HR: 'my-4 border-solid border-navy border-2'
       }
     const longCode = {
-        CODE: 'flex overflow-x-auto bg-navy font-mono text-yellow-100 px-1 py-1 text-xs',
+        CODE: 'flex overflow-x-auto bg-navy font-mono text-yellow-50 px-1 py-1 text-xs',
     }
     const shortCode = {
-        CODE: 'bg-navy font-mono text-yellow-100 px-1 py-1 text-xs'
+        CODE: 'bg-navy font-mono text-yellow-50 px-1 py-1 text-xs'
     }
 
     useEffect( () => {
