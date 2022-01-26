@@ -44,8 +44,8 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
             }
             `)
      
-    const pages = postsResults.data.allMarkdownRemark.edges
-    pages.forEach(({ node }) => {
+    const posts = postsResults.data.allMarkdownRemark.edges
+    posts.forEach(({ node }) => {
             createPage({
                 path: node.fields.slug,
                 component: blogPostTemplate,

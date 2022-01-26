@@ -25,6 +25,8 @@ const Index = ({data}) => {
     }
     const projects = data.projects.edges
     const blogs = data.blogs.edges
+    const wordlePostSlug = data.wordlePost.fields.slug
+    
     return (
     <div className='mx-auto bg-navy h-screen bg-center bg-repeat' style={{backgroundImage: `url(${background})`}}>
         <div className='mx-auto w-full md:max-w-3xl py-16 sm:py-32'>
@@ -88,6 +90,9 @@ const Index = ({data}) => {
                             <p>
                                 I'm a UI Engineer from Little Rock, Arkansas. I used to co-own a coffee company but left to become a web-developer.
                                 Personally, I love my family, making coffee and cocktails, listening to music, and watching soccer.
+                            </p>
+                            <p>
+                                I'm currently working on <a className="blue-link" href="https://wordlenerds.com">Wordle Nerds</a> a Wordle Leaderboard. You can also read about the project <Link className="blue-link" to={wordlePostSlug}>here.</Link>
                             </p>
                             <ul className='hidden sm:flex flex-col pl-2 py-2 mt-2 list-disc list-inside'>
                                 <li>Read my <Link className='blue-link' to="/blog">blog</Link>.<br /></li>
@@ -201,6 +206,11 @@ export const query = graphql`
             fileAbsolutePath
             excerpt(pruneLength: 160)
             }
+        }
+    }
+    wordlePost: markdownRemark(frontmatter: {title: {eq: "WordleNerds: a Wordle Leaderboard"}}) {
+        fields {
+          slug
         }
     }
   }  
