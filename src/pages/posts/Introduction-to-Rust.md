@@ -6,7 +6,7 @@ tags: ['rust']
 
 # Introduction to Rust
 
-Rust is a programming language that is "fundamentally about _empowerment_"* Meaning Rust is designed to empower you to be able to write code that can serve more "domains" than you did before. It can be used for low-level programs, to Native applications as well as Web Applications. I currently use [Warp](https://www.warp.dev/), which is a terminal is written in Rust. And many other projects like run-times, Command-Line Interfaces (CLIs), compilers and bundlers are being written in Rust as well. 
+Rust is a programming language that is "fundamentally about _empowerment_"* Meaning Rust is designed to empower you to be able to write code that can serve more "domains" than you did before. It can be used for low-level programs, to Native applications as well as Web Applications. I currently use [Warp](https://www.warp.dev/), which is a terminal written in Rust. And many other projects like run-times, Command-Line Interfaces (CLIs), compilers and bundlers are being written in Rust as well. 
 
 A few quick facts about Rust: 
 * It is a low-level language which allows it to be extremely fast.
