@@ -87,12 +87,12 @@ const Index = ({data}) => {
                                 <Link className="hover:text-blue-600 underline sm:hidden" to='/about'>About</Link>
                             </h3>
                             <h4 className='text-center text-2xl font-bold'><span role='img' aria-label='hand-wave-emoji'>👋🏻</span> Hi, I'm Andy! </h4>
-                            <p>
+                            <p className='pb-2'>
                                 I'm a UI Engineer from Little Rock, Arkansas. I used to co-own a coffee company but left to become a web-developer.
                                 Personally, I love my family, making coffee and cocktails, listening to music, and watching soccer.
                             </p>
                             <p>
-                                I'm currently working on <a className="blue-link" href="https://wordlenerds.com">Wordle Nerds</a> a Wordle Leaderboard. You can also read about the project <Link className="blue-link" to={wordlePostSlug}>here.</Link>
+                                I'm currently reading a lot and compiling a list of things I recommend.
                             </p>
                             <ul className='hidden sm:flex flex-col pl-2 py-2 mt-2 list-disc list-inside'>
                                 <li>Read my <Link className='blue-link' to="/blog">blog</Link>.<br /></li>
