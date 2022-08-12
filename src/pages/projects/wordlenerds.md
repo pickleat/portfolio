@@ -6,6 +6,8 @@ website: 'https://wordlenerds.com'
 github: 'https://github.com/pickleat/wordleleaderboard'
 ---
 
+# Note: I have since stopped working on this project. I have added some screenshots for posterity, but will not be updating it. 
+
 > Problem: I like Wordle, but I want to remember my "stats" and compare myself to others.
 
 > Solution: A leaderboard for the big Wordle fans!
@@ -28,4 +30,13 @@ I have an idea and I have the starter code. So I set up a project on [Supabase](
 ### Next Steps
 
 I'll plan on writing short addendums as I release new features... like the actual leaderboard. For now, please sign up at [WordleNerds.com](https://wordlenerds.com) if you want to join in on the fun!
+
+### Post-Mortem / Posterity
+
+Sadly, I didn't make it as far on this project as I'd hoped. Life happened and I got distracted. Before I quit I was able to create auth (using magic links), edit profile pages, the ability to add each day's Wordle solution, and it would keep track of your individual streak. I've attached some screenshots for posterity but I don't plan on returning to the project in the future. 
+
+
+![Screenshot of an empty textarea showing where a user would add their Wordle solution](https://raw.githubusercontent.com/pickleat/dev.to/master/Wordle-Leaderboard-Add-Puzzle.png)
+
+![Screenshot of a user's current and best streak, and a list of their previous Wordle solutions](https://raw.githubusercontent.com/pickleat/dev.to/master/Wordle-Leaderboard-Streak.png)
 
