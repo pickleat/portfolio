@@ -154,3 +154,30 @@ console.log(andy.childNodes);
 `andy.children` will show an HTMLCollection with only the `<em>` in it. Whereas `andy.childNodes` will show a NodeList with text, `<em>`, and more text. 
 Essentially `.childNodes` gives you everything inside what you've selected and `.children` only gives you HTML elements inside your selection.
 [Lesson Link](https://wesbos.com/javascript/04-the-dom/traversing-and-removing-nodes)
+
+## Day 24: Cardio
+Challenge: take a blank JS file and edit an HTML file with it. But write all JavaScript out BEFORE looking at the results. My solutions had several errors, but I got there in the end. It was good to review `insertAdjacentHTML()`.
+
+## Day 25: Event Listener
+(paraphrasing Wes here) The three steps for event listeners:
+1. Get element
+2. Listen for an event
+3. Do something
+
+Other learnings:
+1. Adding an event listener is called **binding** and removing one is called **unbinding**.
+2. You cannot unbind a listener that has been declared with an anonymous function. 
+```js
+// Adding a listener
+element.addEventListener('click', function() {
+  console.log('clicked');
+}) 
+// Attempting to remove it
+element.removeEventListener('click', function() {
+  console.log('clicked');
+}) // Doesn't work
+
+```
+This doesn't work because even though the `function` is exactly the same, the listener needs to be a reference to a named function. If we ever want to remove a listener we need to declare its callback function with a name. 
+
+[Lesson Link](https://wesbos.com/javascript/05-events/event-listener)
