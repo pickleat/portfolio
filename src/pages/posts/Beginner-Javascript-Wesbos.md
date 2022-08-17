@@ -181,3 +181,48 @@ element.removeEventListener('click', function() {
 This doesn't work because even though the `function` is exactly the same, the listener needs to be a reference to a named function. If we ever want to remove a listener we need to declare its callback function with a name. 
 
 [Lesson Link](https://wesbos.com/javascript/05-events/event-listener)
+
+## Day 26 Targets, Bubbling, Propagation and Capture
+`event.pressure` works on touchscreen devices!
+
+The difference between `event.target` and `event.currentTarget` is `currentTarget` is the specific element clicked, and `target` can be an event that has been bubbled up to by a child element.
+```html
+<script>
+  function whoFiredTheEvent(event) {
+    if(event.target === event.currentTarget){
+      console.log("Button Fired it")
+    }
+    if(event.target !== event.currentTarget){
+      console.log("Child Span Fired it")
+    }
+  }
+  const buttons = document.querySelectorAll('button');
+  buttons.forEach((button) => {
+    button.addEventListener('click', whoFiredTheEvent)
+  })
+</script>
+<body>
+  <button class="no-bubbles">
+    No Bubbles
+  </button>
+  <button class="bubbles">
+    Bubbles <span>Up</span>
+  </button>
+</body>
+
+```
+
+In the example above if you click on "Up" you will see that the `currentTarget` is `<span>Up</span>` but the function `whoFiredTheEvent` is still called because it bubbles up. 
+If you don't want an event to bubble up you can use `event.stopPropagation()`. 
+You can also make sure to capture events in global way by using the third parameter to your eventListener. Like so:
+```js
+window.addEventListener('click', (event) => {
+  console.log('in the capture phase');
+  event.stopPropagation();
+  },
+  { capture: true }  
+)
+```
+If the above code was added to the previous example then we would never make it to the `whoFiredTheEvent()` function because the capture phase occurs *before* the bubbling phase. This could be helpful if you need to check for something BEFORE adding / removing a certain listener. But probably not on "click". 
+
+[Lesson Link](https://wesbos.com/javascript/05-events/targets-bubbling-propagation-and-capture)
