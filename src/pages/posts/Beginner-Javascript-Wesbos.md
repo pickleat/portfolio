@@ -185,7 +185,7 @@ This doesn't work because even though the `function` is exactly the same, the li
 ## Day 26 Targets, Bubbling, Propagation and Capture
 `event.pressure` works on touchscreen devices!
 
-The difference between `event.target` and `event.currentTarget` is `currentTarget` is the specific element clicked, and `target` can be an event that has been bubbled up to by a child element.
+The difference between `event.target` and `event.currentTarget` is `currentTarget` is the specific element clicked, and `target` can be an event that has been bubbled up by a child element.
 ```html
 <script>
   function whoFiredTheEvent(event) {
@@ -226,3 +226,7 @@ window.addEventListener('click', (event) => {
 If the above code was added to the previous example then we would never make it to the `whoFiredTheEvent()` function because the capture phase occurs *before* the bubbling phase. This could be helpful if you need to check for something BEFORE adding / removing a certain listener. But probably not on "click". 
 
 [Lesson Link](https://wesbos.com/javascript/05-events/targets-bubbling-propagation-and-capture)
+
+## Day 27 Prevent Default and Form Events
+`event.preventDefault()` allows you to override the default behavior of a particular element. Links should take you somewhere, but adding `event.preventDefault()` allows you to do something first, or perhaps ask a second question. Its main usecase is on forms and buttons in my experience.
+[Lesson Link](https://wesbos.com/javascript/05-events/prevent-default-and-form-events)
