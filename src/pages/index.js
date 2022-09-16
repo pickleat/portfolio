@@ -25,7 +25,6 @@ const Index = ({data}) => {
     }
     const projects = data.projects.edges
     const blogs = data.blogs.edges
-    const wordlePostSlug = data.wordlePost.fields.slug
     
     return (
     <div className='mx-auto bg-navy h-screen bg-center bg-repeat' style={{backgroundImage: `url(${background})`}}>
@@ -92,7 +91,7 @@ const Index = ({data}) => {
                                 Personally, I love my family, making coffee and cocktails, listening to music, and watching soccer.
                             </p>
                             <p>
-                                I'm currently reading a lot and compiling a list of things I recommend.
+                                I'm currently working on <a className="hover:text-blue-600 underline font-bold sm:hover:underline " href="https://fridayrecommends.com">FRDY RCMDS</a>, a recommendation website of stuff I like.
                             </p>
                             <ul className='hidden sm:flex flex-col pl-2 py-2 mt-2 list-disc list-inside'>
                                 <li>Read my <Link className='blue-link' to="/blog">blog</Link>.<br /></li>
@@ -206,11 +205,6 @@ export const query = graphql`
             fileAbsolutePath
             excerpt(pruneLength: 160)
             }
-        }
-    }
-    wordlePost: markdownRemark(frontmatter: {title: {eq: "WordleNerds: a Wordle Leaderboard"}}) {
-        fields {
-          slug
         }
     }
   }  
